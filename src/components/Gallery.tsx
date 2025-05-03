@@ -121,6 +121,14 @@ const Gallery: React.FC = () => {
             coverImage: '/attached_assets/Matante mutante/Matante mutante.JPG',
             date: '2024-01-15',
             photoCount: 13
+          },
+          {
+            id: 'orloge-simard',
+            name: 'Orloge Simard',
+            description: 'Live Performance',
+            coverImage: '/attached_assets/Orloge Simard/Orloge-2.JPG',
+            date: '2024-01-15',
+            photoCount: 14
           }
         ]);
 
@@ -341,6 +349,23 @@ const Gallery: React.FC = () => {
               { id: 'matante-11', url: '/attached_assets/Matante mutante/Matante mutante-11.JPG' },
               { id: 'matante-12', url: '/attached_assets/Matante mutante/Matante mutante-12.JPG' },
               { id: 'matante-13', url: '/attached_assets/Matante mutante/Matante mutante-13.JPG' }
+            ];
+          } else if (selectedAlbum.id === 'orloge-simard') {
+            photos = [
+              { id: 'orloge-clavieriste-3', url: '/attached_assets/Orloge Simard/Orloge claviériste-3.JPG' },
+              { id: 'orloge-14', url: '/attached_assets/Orloge Simard/Orloge-14.JPG' },
+              { id: 'orloge-15', url: '/attached_assets/Orloge Simard/Orloge-15.JPG' },
+              { id: 'orloge-16', url: '/attached_assets/Orloge Simard/Orloge-16.JPG' },
+              { id: 'orloge-17', url: '/attached_assets/Orloge Simard/Orloge-17.JPG' },
+              { id: 'orloge-19', url: '/attached_assets/Orloge Simard/Orloge-19.JPG' },
+              { id: 'orloge-2', url: '/attached_assets/Orloge Simard/Orloge-2.JPG' },
+              { id: 'orloge-21', url: '/attached_assets/Orloge Simard/Orloge-21.JPG' },
+              { id: 'orloge-22', url: '/attached_assets/Orloge Simard/Orloge-22.JPG' },
+              { id: 'orloge-28', url: '/attached_assets/Orloge Simard/Orloge-28.JPG' },
+              { id: 'orloge-29', url: '/attached_assets/Orloge Simard/Orloge-29.JPG' },
+              { id: 'orloge-33', url: '/attached_assets/Orloge Simard/Orloge-33.JPG' },
+              { id: 'orloge-34', url: '/attached_assets/Orloge Simard/Orloge-34.JPG' },
+              { id: 'orloge-6', url: '/attached_assets/Orloge Simard/Orloge-6.JPG' }
             ];
           } else if (selectedAlbum.id === 'parabolus-cem') {
             photos = [
