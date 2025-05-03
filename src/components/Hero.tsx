@@ -43,7 +43,7 @@ const Hero: React.FC = () => {
           className="text-center px-6 space-y-12 mt-48"
         >
           <motion.h2 
-            className="text-xl md:text-2xl lg:text-3xl font-cinzel text-rock-gold typewriter-text"
+            className="text-xl md:text-2xl lg:text-3xl font-cinzel text-rock-gold typewriter-text glow-text"
           >
             <span className="text-glow">{text}</span>
             <Cursor cursorColor="#FFD84A" />
