@@ -21,10 +21,10 @@ const Header: React.FC = () => {
     };
   }, []);
   
-  const headerClasses = `fixed top-0 left-0 right-0 z-40 transition-all duration-300 ${
+  const headerClasses = `fixed top-0 left-0 right-0 z-40 transition-all duration-500 backdrop-blur-md ${
     isScrolled 
-      ? 'py-2 header-gradient shadow-lg' 
-      : 'py-4 header-gradient bg-opacity-50'
+      ? 'py-2 bg-black/80 shadow-xl border-b border-rock-gold/20' 
+      : 'py-4 bg-transparent'
   }`;
   
   return (

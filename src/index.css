@@ -316,12 +316,14 @@ header.header-gradient {
 
 /* Button styles */
 .rock-button {
-  @apply px-6 py-2 font-cinzel uppercase tracking-wider bg-rock-dark/80 border-2 border-rock-gold text-rock-gold font-bold rounded-sm transition-all duration-300;
+  @apply px-8 py-3 font-cinzel uppercase tracking-wider bg-rock-dark/80 border-2 border-rock-gold text-rock-gold font-bold rounded-sm transition-all duration-500 hover:scale-105;
   text-shadow: 0 0 5px rgba(255, 216, 74, 0.5);
   box-shadow: var(--glow-gold);
   position: relative;
   overflow: hidden;
   isolation: isolate;
+  backdrop-filter: blur(4px);
+  letter-spacing: 0.2em;
 }
 
 .rock-button::before {
