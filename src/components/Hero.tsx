@@ -50,12 +50,13 @@ const Hero: React.FC = () => {
       id="accueil" 
       className="relative min-h-screen flex items-center justify-center overflow-hidden"
       style={{
-        backgroundImage: "url('/src/assets/JohellKodac_Header_ACCUEIL.png')",
+        backgroundImage: "url('/src/assets/BACKGROUND WEBSITE.png')",
         backgroundSize: 'cover',
         backgroundPosition: 'center',
         backgroundRepeat: 'no-repeat',
         height: '100vh',
-        width: '100%'
+        width: '100%',
+        imageRendering: 'crisp-edges'
       }}
     >
       {/* Overlay avec dégradé */}

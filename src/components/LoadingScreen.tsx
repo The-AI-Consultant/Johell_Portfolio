@@ -11,9 +11,10 @@ const LoadingScreen: React.FC = () => {
         transition={{ duration: 0.5 }}
         className="mb-8"
       >
-        <Camera 
-          className="w-24 h-24 text-rock-gold animate-glow-pulse" 
-          strokeWidth={1.5} 
+        <img 
+          src="/src/assets/LOGO johell Kodac.jpg"
+          alt="Johell Kodac Logo"
+          className="w-32 h-auto mb-4 animate-glow-pulse"
         />
       </motion.div>
       
