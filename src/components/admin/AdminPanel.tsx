@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Settings, X, Upload, FolderPlus } from 'lucide-react';
 import { useAuth } from '../../context/AuthContext';
+import Login from './Login';
 import { storageService } from '../../services/storageService';
 import UploadForm from './UploadForm';
 import CreateAlbumForm from './CreateAlbumForm';
@@ -9,6 +10,7 @@ import CreateAlbumForm from './CreateAlbumForm';
 const AdminPanel: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [activeTab, setActiveTab] = useState<'upload' | 'createAlbum'>('upload');
+  const { isAuthenticated } = useAuth();
 
   const togglePanel = () => {
     setIsOpen(!isOpen);
@@ -48,7 +50,8 @@ const AdminPanel: React.FC = () => {
       </button>
 
       <AnimatePresence>
-        {isOpen && (
+        {isOpen && !isAuthenticated && <Login />}
+        {isOpen && isAuthenticated && (
           <motion.div
             initial={{ x: '100%', opacity: 0 }}
             animate={{ x: 0, opacity: 1 }}
