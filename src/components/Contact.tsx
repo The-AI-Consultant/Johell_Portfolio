@@ -135,7 +135,7 @@ const Contact: React.FC = () => {
                 rel="noopener noreferrer"
                 className="w-10 h-10 rounded-full bg-rock-gold/20 flex items-center justify-center hover:bg-rock-gold/40 transition-colors duration-300"
               >
-                <Twitter className="w-5 h-5 text-rock-gold" />
+                <Facebook className="w-5 h-5 text-rock-gold" />
               </a>
               <a 
                 href="https://facebook.com" 
