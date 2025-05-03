@@ -86,7 +86,7 @@ body {
 /* Section spacing */
 section {
   position: relative;
-  margin-bottom: 4rem;
+  margin-bottom: 2rem;
   isolation: isolate;
 }
 
