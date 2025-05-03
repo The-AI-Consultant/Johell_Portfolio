@@ -107,6 +107,14 @@ const Gallery: React.FC = () => {
             photoCount: 11
           },
           {
+            id: 'parabolus-capitole',
+            name: 'Parabolus - Capitole',
+            description: 'Live at Capitole',
+            coverImage: '/attached_assets/Parabolus Capitole/parabolus-13_54373958520_o.jpg',
+            date: '2024-01-15',
+            photoCount: 20
+          },
+          {
             id: 'matante-mutante',
             name: 'Matante Mutante',
             description: 'Live Performance',
@@ -294,6 +302,29 @@ const Gallery: React.FC = () => {
               { id: 'fantera-14', url: '/attached_assets/Fantera/GIGA PIXEL 2X fantera-14_54373940055_o1-standard-scale-0_50x.jpeg' },
               { id: 'fantera-4-alt', url: '/attached_assets/Fantera/GIGA PIXEL 2X fantera-4_54373546711_o1-standard-scale-0_50x.jpeg' },
               { id: 'fantera-5-alt', url: '/attached_assets/Fantera/GIGA PIXEL 2X fantera-5_54373940040_o1-standard-scale-0_50x.jpeg' }
+            ];
+          } else if (selectedAlbum.id === 'parabolus-capitole') {
+            photos = [
+              { id: 'parabolus-cap-10', url: '/attached_assets/Parabolus Capitole/parabolus-10_54372689592_o.jpg' },
+              { id: 'parabolus-cap-121', url: '/attached_assets/Parabolus Capitole/parabolus-121_54372689227_o.jpg' },
+              { id: 'parabolus-cap-124', url: '/attached_assets/Parabolus Capitole/parabolus-124_54372689022_o.jpg' },
+              { id: 'parabolus-cap-128', url: '/attached_assets/Parabolus Capitole/parabolus-128_54373564881_o.jpg' },
+              { id: 'parabolus-cap-13', url: '/attached_assets/Parabolus Capitole/parabolus-13_54373958520_o.jpg' },
+              { id: 'parabolus-cap-145', url: '/attached_assets/Parabolus Capitole/parabolus-145_54373805913_o.jpg' },
+              { id: 'parabolus-cap-146', url: '/attached_assets/Parabolus Capitole/parabolus-146_54373768544_o.jpg' },
+              { id: 'parabolus-cap-149', url: '/attached_assets/Parabolus Capitole/parabolus-149_54373768524_o.jpg' },
+              { id: 'parabolus-cap-161', url: '/attached_assets/Parabolus Capitole/parabolus-161_54373805823_o.jpg' },
+              { id: 'parabolus-cap-165', url: '/attached_assets/Parabolus Capitole/parabolus-165_54373564831_o.jpg' },
+              { id: 'parabolus-cap-23', url: '/attached_assets/Parabolus Capitole/parabolus-23_54373768949_o.jpg' },
+              { id: 'parabolus-cap-28', url: '/attached_assets/Parabolus Capitole/parabolus-28_54373565176_o.jpg' },
+              { id: 'parabolus-cap-39', url: '/attached_assets/Parabolus Capitole/parabolus-39_54372689412_o.jpg' },
+              { id: 'parabolus-cap-48', url: '/attached_assets/Parabolus Capitole/parabolus-48_54373565156_o.jpg' },
+              { id: 'parabolus-cap-57', url: '/attached_assets/Parabolus Capitole/parabolus-57_54372689447_o.jpg' },
+              { id: 'parabolus-cap-74', url: '/attached_assets/Parabolus Capitole/parabolus-74_54373958505_o.jpg' },
+              { id: 'parabolus-cap-83', url: '/attached_assets/Parabolus Capitole/parabolus-83_54373806153_o.jpg' },
+              { id: 'parabolus-cap-86', url: '/attached_assets/Parabolus Capitole/parabolus-86_54373768904_o.jpg' },
+              { id: 'parabolus-cap-93', url: '/attached_assets/Parabolus Capitole/parabolus-93_54373958440_o.jpg' },
+              { id: 'parabolus-cap-98', url: '/attached_assets/Parabolus Capitole/parabolus-98_54373768759_o.jpg' }
             ];
           } else if (selectedAlbum.id === 'matante-mutante') {
             photos = [
