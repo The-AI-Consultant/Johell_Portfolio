@@ -13,12 +13,16 @@ const Footer: React.FC = () => {
             transition={{ duration: 0.5 }}
             className="flex items-center mb-6 md:mb-0"
           >
-            <Camera className="w-6 h-6 text-rock-gold mr-2" />
-            <span className="text-xl font-rockSalt text-rock-gold">
-              Johell Kodac
-            </span>
+            <img 
+            src="/attached_assets/Johell Logo Vector.jpeg" 
+            alt="Johell Kodac Logo" 
+            className="h-12 w-auto mr-3"
+          />
+          <span className="text-2xl font-cinzel text-rock-gold tracking-wider">
+            Johell Kodac
+          </span>
           </motion.div>
-          
+
           <motion.div 
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}

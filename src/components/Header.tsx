@@ -66,24 +66,6 @@ const Header: React.FC = () => {
           <a href="#contact" className="nav-link text-lg font-montserrat mx-8">
             Contact
           </a>
-          
-          {isAuthenticated ? (
-            <button
-              onClick={logout}
-              className="admin-button"
-            >
-              Déconnexion
-            </button>
-          ) : (
-            <button
-              onClick={() => setMobileMenuOpen(false)}
-              className="admin-button"
-              data-toggle="modal"
-              data-target="#loginModal"
-            >
-              <a href="#admin">Admin</a>
-            </button>
-          )}
         </motion.nav>
         
         {/* Mobile Menu Button */}
