@@ -23,15 +23,15 @@ const Contact: React.FC = () => {
 
     try {
       await emailjs.send(
-        'default_service', // Service ID - REPLACE WITH YOUR SERVICE ID
-        'template_contact', // Template ID - REPLACE WITH YOUR TEMPLATE ID
+        'service_h7nkuk2',
+        'template_contact',
         {
           from_name: formData.name,
           from_email: formData.email,
           message: formData.message,
           to_email: 'johellkodac@gmail.com'
         },
-        'YOUR_PUBLIC_KEY' // Public Key - REPLACE WITH YOUR PUBLIC KEY
+        'rTKDu98_oIAM2Wp74'
       );
       setStatus('success');
       setFormData({ name: '', email: '', message: '' });
