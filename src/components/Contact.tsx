@@ -131,7 +131,7 @@ const Contact: React.FC = () => {
               </a>
               <a 
                 href="https://www.facebook.com/profile.php?id=100083541791749"
-                target="_blank"ank" 
+                target="_blank" 
                 rel="noopener noreferrer"
                 className="w-10 h-10 rounded-full bg-rock-gold/20 flex items-center justify-center hover:bg-rock-gold/40 transition-colors duration-300"
               >
