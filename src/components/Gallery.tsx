@@ -107,12 +107,12 @@ const Gallery: React.FC = () => {
             photoCount: 11
           },
           {
-            id: 'kain',
-            name: 'Kain',
+            id: 'matante-mutante',
+            name: 'Matante Mutante',
             description: 'Live Performance',
-            coverImage: '/attached_assets/Kain/GIGA PIXEL 2X kain-10_54373801459_o1-standard-scale-0_50x.jpeg',
+            coverImage: '/attached_assets/Matante mutante/Matante mutante.JPG',
             date: '2024-01-15',
-            photoCount: 16
+            photoCount: 13
           }
         ]);
 
@@ -295,24 +295,21 @@ const Gallery: React.FC = () => {
               { id: 'fantera-4-alt', url: '/attached_assets/Fantera/GIGA PIXEL 2X fantera-4_54373546711_o1-standard-scale-0_50x.jpeg' },
               { id: 'fantera-5-alt', url: '/attached_assets/Fantera/GIGA PIXEL 2X fantera-5_54373940040_o1-standard-scale-0_50x.jpeg' }
             ];
-          } else if (selectedAlbum.id === 'kain') {
+          } else if (selectedAlbum.id === 'matante-mutante') {
             photos = [
-              { id: 'kain-10', url: '/attached_assets/Kain/GIGA PIXEL 2X kain-10_54373801459_o1-standard-scale-0_50x.jpeg' },
-              { id: 'kain-11', url: '/attached_assets/Kain/GIGA PIXEL 2X kain-11_54373597796_o1-standard-scale-0_50x.jpeg' },
-              { id: 'kain-12', url: '/attached_assets/Kain/GIGA PIXEL 2X kain-12_54373839268_o1-standard-scale-0_50x.jpeg' },
-              { id: 'kain-13', url: '/attached_assets/Kain/GIGA PIXEL 2X kain-13_54373991540_o1-standard-scale-0_50x.jpeg' },
-              { id: 'kain-14', url: '/attached_assets/Kain/GIGA PIXEL 2X kain-14_54373801399_o1-standard-scale-0_50x.jpeg' },
-              { id: 'kain-15', url: '/attached_assets/Kain/GIGA PIXEL 2X kain-15_54372722327_o1-standard-scale-0_50x.jpeg' },
-              { id: 'kain-16', url: '/attached_assets/Kain/GIGA PIXEL 2X kain-16_54373839208_o1-standard-scale-0_50x.jpeg' },
-              { id: 'kain-2', url: '/attached_assets/Kain/GIGA PIXEL 2X kain-2_54373801599_o1-standard-scale-0_50x.jpeg' },
-              { id: 'kain-3', url: '/attached_assets/Kain/GIGA PIXEL 2X kain-3_54372722637_o1-standard-scale-0_50x.jpeg' },
-              { id: 'kain-4', url: '/attached_assets/Kain/GIGA PIXEL 2X kain-4_54373597911_o1-standard-scale-0_50x.jpeg' },
-              { id: 'kain-5', url: '/attached_assets/Kain/GIGA PIXEL 2X kain-5_54373991715_o1-standard-scale-0_50x.jpeg' },
-              { id: 'kain-6', url: '/attached_assets/Kain/GIGA PIXEL 2X kain-6_54372722542_o1-standard-scale-0_50x.jpeg' },
-              { id: 'kain-7', url: '/attached_assets/Kain/GIGA PIXEL 2X kain-7_54373991720_o1-standard-scale-0_50x.jpeg' },
-              { id: 'kain-8', url: '/attached_assets/Kain/GIGA PIXEL 2X kain-8_54373801514_o1-standard-scale-0_50x.jpeg' },
-              { id: 'kain-9', url: '/attached_assets/Kain/GIGA PIXEL 2X kain-9_54373801524_o1-standard-scale-0_50x.jpeg' },
-              { id: 'kain', url: '/attached_assets/Kain/GIGA PIXEL 2X kain_54372722612_o1-standard-scale-0_50x.jpeg' }
+              { id: 'matante-1', url: '/attached_assets/Matante mutante/Matante mutante.JPG' },
+              { id: 'matante-2', url: '/attached_assets/Matante mutante/Matante mutante-2.JPG' },
+              { id: 'matante-3', url: '/attached_assets/Matante mutante/Matante mutante-3.JPG' },
+              { id: 'matante-4', url: '/attached_assets/Matante mutante/Matante mutante-4.JPG' },
+              { id: 'matante-5', url: '/attached_assets/Matante mutante/Matante mutante-5.JPG' },
+              { id: 'matante-6', url: '/attached_assets/Matante mutante/Matante mutante-6.JPG' },
+              { id: 'matante-7', url: '/attached_assets/Matante mutante/Matante mutante-7.JPG' },
+              { id: 'matante-8', url: '/attached_assets/Matante mutante/Matante mutante-8.JPG' },
+              { id: 'matante-9', url: '/attached_assets/Matante mutante/Matante mutante-9.JPG' },
+              { id: 'matante-10', url: '/attached_assets/Matante mutante/Matante mutante-10.JPG' },
+              { id: 'matante-11', url: '/attached_assets/Matante mutante/Matante mutante-11.JPG' },
+              { id: 'matante-12', url: '/attached_assets/Matante mutante/Matante mutante-12.JPG' },
+              { id: 'matante-13', url: '/attached_assets/Matante mutante/Matante mutante-13.JPG' }
             ];
           } else if (selectedAlbum.id === 'parabolus-cem') {
             photos = [
