@@ -1,7 +1,8 @@
-// Configuration for MSAL authentication
+
+// Azure AD (Microsoft identity platform) Configuration
 export const msalConfig = {
   auth: {
-    clientId: process.env.ONEDRIVE_CLIENT_ID,
+    clientId: process.env.AZURE_CLIENT_ID,
     authority: "https://login.microsoftonline.com/common",
     redirectUri: window.location.origin,
   },
@@ -14,5 +15,12 @@ export const msalConfig = {
 export const graphConfig = {
   graphMeEndpoint: "https://graph.microsoft.com/v1.0/me",
   graphDriveEndpoint: "https://graph.microsoft.com/v1.0/me/drive",
-  graphPhotosFolder: "Photos", // Main folder for all photos in OneDrive
+  graphPhotosFolder: "Photos",
+  scopes: [
+    "User.Read",
+    "Files.Read",
+    "Files.ReadWrite",
+    "Files.Read.All",
+    "Files.ReadWrite.All"
+  ]
 };
