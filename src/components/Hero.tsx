@@ -16,13 +16,14 @@ const Hero: React.FC = () => {
   });
 
   return (
-    <div className="relative w-full h-screen">
+    <div className="relative w-full h-screen pt-16">
       <div 
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
         style={{
           backgroundImage: "url('/attached_assets/WEBAPP_HEADER_HERO.png')",
-          height: '100vh',
-          width: '100%'
+          height: 'calc(100vh)',
+          width: '100%',
+          top: '0'
         }}
       >
         <div className="absolute inset-0 bg-black/40" />
