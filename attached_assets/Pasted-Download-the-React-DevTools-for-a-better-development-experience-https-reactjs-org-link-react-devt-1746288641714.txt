@@ -1,0 +1,76 @@
+Download the React DevTools for a better development experience: https://reactjs.org/link/react-devtools
+Gallery.tsx:39 Error loading albums: TypeError: getAccessToken is not a function
+    at loadAlbums (Gallery.tsx:28:31)
+    at Gallery.tsx:147:5
+    at commitHookEffectListMount (react-dom_client.js?v=787d1ff2:16915:34)
+    at commitPassiveMountOnFiber (react-dom_client.js?v=787d1ff2:18156:19)
+    at commitPassiveMountEffects_complete (react-dom_client.js?v=787d1ff2:18129:17)
+    at commitPassiveMountEffects_begin (react-dom_client.js?v=787d1ff2:18119:15)
+    at commitPassiveMountEffects (react-dom_client.js?v=787d1ff2:18109:11)
+    at flushPassiveEffectsImpl (react-dom_client.js?v=787d1ff2:19490:11)
+    at flushPassiveEffects (react-dom_client.js?v=787d1ff2:19447:22)
+    at commitRootImpl (react-dom_client.js?v=787d1ff2:19416:13)
+loadAlbums @ Gallery.tsx:39Understand this error
+UploadForm.tsx:39 Error loading albums: TypeError: getAccessToken is not a function
+    at loadAlbums (UploadForm.tsx:25:29)
+    at UploadForm.tsx:44:5
+    at commitHookEffectListMount (react-dom_client.js?v=787d1ff2:16915:34)
+    at commitPassiveMountOnFiber (react-dom_client.js?v=787d1ff2:18156:19)
+    at commitPassiveMountEffects_complete (react-dom_client.js?v=787d1ff2:18129:17)
+    at commitPassiveMountEffects_begin (react-dom_client.js?v=787d1ff2:18119:15)
+    at commitPassiveMountEffects (react-dom_client.js?v=787d1ff2:18109:11)
+    at flushPassiveEffectsImpl (react-dom_client.js?v=787d1ff2:19490:11)
+    at flushPassiveEffects (react-dom_client.js?v=787d1ff2:19447:22)
+    at commitRootImpl (react-dom_client.js?v=787d1ff2:19416:13)
+loadAlbums @ UploadForm.tsx:39Understand this error
+UploadForm.tsx:39 Error loading albums: TypeError: getAccessToken is not a function
+    at loadAlbums (UploadForm.tsx:25:29)
+    at UploadForm.tsx:44:5
+    at commitHookEffectListMount (react-dom_client.js?v=787d1ff2:16915:34)
+    at invokePassiveEffectMountInDEV (react-dom_client.js?v=787d1ff2:18324:19)
+    at invokeEffectsInDev (react-dom_client.js?v=787d1ff2:19701:19)
+    at commitDoubleInvokeEffectsInDEV (react-dom_client.js?v=787d1ff2:19686:15)
+    at flushPassiveEffectsImpl (react-dom_client.js?v=787d1ff2:19503:13)
+    at flushPassiveEffects (react-dom_client.js?v=787d1ff2:19447:22)
+    at commitRootImpl (react-dom_client.js?v=787d1ff2:19416:13)
+    at commitRoot (react-dom_client.js?v=787d1ff2:19277:13)
+loadAlbums @ UploadForm.tsx:39Understand this error
+2UploadForm.tsx:116 Uncaught ReferenceError: FolderPlus is not defined
+    at UploadForm (UploadForm.tsx:116:12)
+    at renderWithHooks (react-dom_client.js?v=787d1ff2:11548:26)
+    at updateFunctionComponent (react-dom_client.js?v=787d1ff2:14582:28)
+    at beginWork (react-dom_client.js?v=787d1ff2:15924:22)
+    at HTMLUnknownElement.callCallback2 (react-dom_client.js?v=787d1ff2:3674:22)
+    at Object.invokeGuardedCallbackDev (react-dom_client.js?v=787d1ff2:3699:24)
+    at invokeGuardedCallback (react-dom_client.js?v=787d1ff2:3733:39)
+    at beginWork$1 (react-dom_client.js?v=787d1ff2:19765:15)
+    at performUnitOfWork (react-dom_client.js?v=787d1ff2:19198:20)
+    at workLoopSync (react-dom_client.js?v=787d1ff2:19137:13)Understand this error
+react-dom_client.js?v=787d1ff2:14032 The above error occurred in the <UploadForm> component:
+
+    at UploadForm (https://6c67b25b-9b28-4c75-aa12-89e1d76e678c-00-wdu7m1z9wlfr.kirk.replit.dev/src/components/admin/UploadForm.tsx:22:23)
+    at div
+    at div
+    at div
+    at MotionComponent (https://6c67b25b-9b28-4c75-aa12-89e1d76e678c-00-wdu7m1z9wlfr.kirk.replit.dev/node_modules/.vite/deps/framer-motion.js?v=787d1ff2:945:40)
+    at PresenceChild (https://6c67b25b-9b28-4c75-aa12-89e1d76e678c-00-wdu7m1z9wlfr.kirk.replit.dev/node_modules/.vite/deps/framer-motion.js?v=787d1ff2:121:24)
+    at AnimatePresence (https://6c67b25b-9b28-4c75-aa12-89e1d76e678c-00-wdu7m1z9wlfr.kirk.replit.dev/node_modules/.vite/deps/framer-motion.js?v=787d1ff2:210:26)
+    at AdminPanel (https://6c67b25b-9b28-4c75-aa12-89e1d76e678c-00-wdu7m1z9wlfr.kirk.replit.dev/src/components/admin/AdminPanel.tsx:26:31)
+    at div
+    at App (https://6c67b25b-9b28-4c75-aa12-89e1d76e678c-00-wdu7m1z9wlfr.kirk.replit.dev/src/App.tsx:31:33)
+    at AuthProvider (https://6c67b25b-9b28-4c75-aa12-89e1d76e678c-00-wdu7m1z9wlfr.kirk.replit.dev/src/context/AuthContext.tsx:31:32)
+
+Consider adding an error boundary to your tree to customize error handling behavior.
+Visit https://reactjs.org/link/error-boundaries to learn more about error boundaries.
+logCapturedError @ react-dom_client.js?v=787d1ff2:14032Understand this error
+react-dom_client.js?v=787d1ff2:19413 Uncaught ReferenceError: FolderPlus is not defined
+    at UploadForm (UploadForm.tsx:116:12)
+    at renderWithHooks (react-dom_client.js?v=787d1ff2:11548:26)
+    at updateFunctionComponent (react-dom_client.js?v=787d1ff2:14582:28)
+    at beginWork (react-dom_client.js?v=787d1ff2:15924:22)
+    at beginWork$1 (react-dom_client.js?v=787d1ff2:19753:22)
+    at performUnitOfWork (react-dom_client.js?v=787d1ff2:19198:20)
+    at workLoopSync (react-dom_client.js?v=787d1ff2:19137:13)
+    at renderRootSync (react-dom_client.js?v=787d1ff2:19116:15)
+    at recoverFromConcurrentError (react-dom_client.js?v=787d1ff2:18736:28)
+    at performConcurrentWorkOnRoot (react-dom_client.js?v=787d1ff2:18684:30)
