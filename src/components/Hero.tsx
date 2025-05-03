@@ -1,4 +1,3 @@
-
 import React, { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
 import { useTypewriter, Cursor } from 'react-simple-typewriter';
@@ -15,40 +14,34 @@ const Hero: React.FC = () => {
     delaySpeed: 2000,
   });
 
-  const [parallaxY, setParallaxY] = useState(0);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      const scrollY = window.scrollY;
-      setParallaxY(scrollY * 0.4);
-    };
-
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
-
   return (
-    <section 
-      id="accueil" 
-      className="relative w-full h-screen"
-      style={{
-        backgroundImage: "url('/attached_assets/image_1746274088701.png')",
-        backgroundSize: 'cover',
-        backgroundPosition: 'center',
-        backgroundRepeat: 'no-repeat'
-      }}
-    >
-      <div className="absolute inset-0 bg-black/30 backdrop-blur-[2px]" />
+    <div className="relative w-full h-screen">
+      <div 
+        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+        style={{
+          backgroundImage: "url('/attached_assets/WEBAPP_HEADER_HERO.png')",
+          height: '100vh',
+          width: '100%'
+        }}
+      >
+        <div className="absolute inset-0 bg-black/40" />
+      </div>
 
-      <div className="container mx-auto px-4 h-full flex items-center justify-center relative z-30">
+      <div className="relative h-full flex items-center justify-center z-10">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
-          className="text-center"
+          className="text-center px-4"
         >
+          <motion.h1 
+            className="text-4xl md:text-6xl lg:text-7xl font-cinzel text-rock-gold mb-8"
+          >
+            À PROPOS DE JOHELL
+          </motion.h1>
+
           <motion.h2 
-            className="text-xl md:text-2xl lg:text-3xl font-cinzel uppercase tracking-wider text-rock-gold mb-6"
+            className="text-xl md:text-2xl lg:text-3xl font-cinzel text-rock-gold mb-12"
           >
             <span>{text}</span>
             <Cursor cursorColor="#FFD84A" />
@@ -57,18 +50,14 @@ const Hero: React.FC = () => {
           <motion.div>
             <a 
               href="#albums" 
-              className="rock-button inline-block"
+              className="rock-button inline-block text-xl"
             >
               Découvrir les Albums
             </a>
           </motion.div>
         </motion.div>
       </div>
-
-      <div className="absolute top-0 left-1/4 w-96 h-96 rounded-full bg-rock-blue opacity-20 blur-3xl" />
-      <div className="absolute top-1/4 right-1/4 w-64 h-64 rounded-full bg-rock-red opacity-20 blur-3xl" />
-      <div className="absolute bottom-0 right-1/3 w-80 h-80 rounded-full bg-rock-orange opacity-20 blur-3xl" />
-    </section>
+    </div>
   );
 };
 
