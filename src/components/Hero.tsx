@@ -56,7 +56,9 @@ const Hero: React.FC = () => {
         backgroundRepeat: 'no-repeat',
         height: '100vh',
         width: '100%',
-        imageRendering: 'crisp-edges'
+        imageRendering: 'crisp-edges',
+        transform: 'translateZ(0)',
+        willChange: 'transform'
       }}
     >
       {/* Content */}

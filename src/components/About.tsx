@@ -33,7 +33,7 @@ const About: React.FC = () => {
   return (
     <section 
       id="a-propos" 
-      className="relative py-20 md:py-28 bg-rock-dark"
+      className="relative py-16 md:py-24 bg-rock-dark"
       style={{
         backgroundImage: "url('/src/assets/BACKGROUND WEBSITE.png')",
         backgroundSize: 'cover',

@@ -106,7 +106,7 @@ const Header: React.FC = () => {
           animate={{ opacity: 1, height: 'auto' }}
           exit={{ opacity: 0, height: 0 }}
           transition={{ duration: 0.3 }}
-          className="md:hidden bg-rock-dark border-t border-rock-gold"
+          className="md:hidden bg-rock-dark/95 backdrop-blur-md border-t border-rock-gold fixed top-[64px] left-0 right-0 z-50"
         >
           <div className="container mx-auto px-4 py-4 flex flex-col">
             <a 
