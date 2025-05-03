@@ -43,53 +43,13 @@ const Gallery: React.FC = () => {
         // Use sample data when not authenticated
         setAlbums([
           {
-            id: '1',
-            name: 'Metallica 2024',
-            description: 'Concert au Stade de France',
-            coverImage: 'https://images.pexels.com/photos/167636/pexels-photo-167636.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
-            date: '2024-04-01',
-            photoCount: 24
-          },
-          {
-            id: '2',
-            name: 'Iron Maiden',
-            description: 'The Future Past Tour',
-            coverImage: 'https://images.pexels.com/photos/1763075/pexels-photo-1763075.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
-            date: '2024-03-15',
-            photoCount: 32
-          },
-          {
-            id: '3',
-            name: 'Hellfest 2023',
-            description: 'Festival complet',
-            coverImage: 'https://images.pexels.com/photos/1540406/pexels-photo-1540406.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
-            date: '2023-06-23',
-            photoCount: 120
-          },
-          {
-            id: '4',
-            name: 'AC/DC',
-            description: 'Power Up Tour',
-            coverImage: 'https://images.pexels.com/photos/144429/pexels-photo-144429.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
-            date: '2023-05-17',
-            photoCount: 45
-          },
-          {
-            id: '5',
-            name: 'Rammstein',
-            description: 'Stade de France',
-            coverImage: 'https://images.pexels.com/photos/2078076/pexels-photo-2078076.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
-            date: '2023-04-09',
-            photoCount: 56
-          },
-          {
-            id: '6',
-            name: 'Tool Live',
-            description: 'Bercy Arena',
-            coverImage: 'https://images.pexels.com/photos/1494062/pexels-photo-1494062.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
-            date: '2023-02-28',
-            photoCount: 38
-          },
+            id: 'steeve-desgagne',
+            name: 'Steeve Desgagné',
+            description: 'Portrait Session',
+            coverImage: '/attached_assets/Steeve Desgagné/GIGA PIXEL 2X steeve-12_54373818634_o1-standard-scale-0_50x.jpeg',
+            date: '2024-01-15',
+            photoCount: 16
+          }
         ]);
 
         setLoading(false);
@@ -128,17 +88,35 @@ const Gallery: React.FC = () => {
       } else {
         // Use sample data when not authenticated
         setTimeout(() => {
-          setPhotos([
-            {
-              id: 'yvan1',
-              albumId: selectedAlbum.id,
-              name: 'Yvan Portrait 1',
-              url: '/attached_assets/Yvan Pedneault/GIGA PIXEL 2X yvan-1_54373778343_o1-standard-scale-0_50x.jpeg',
-              thumbnailUrl: '/attached_assets/Yvan Pedneault/GIGA PIXEL 2X yvan-1_54373778343_o1-standard-scale-0_50x.jpeg',
-              dateAdded: '2024-01-01',
-              width: 1600,
-              height: 1067
-            },
+          const photos = [
+            { id: 'steeve-12', url: '/attached_assets/Steeve Desgagné/GIGA PIXEL 2X steeve-12_54373818634_o1-standard-scale-0_50x.jpeg' },
+            { id: 'steeve-15', url: '/attached_assets/Steeve Desgagné/GIGA PIXEL 2X steeve-15_54372738932_o1-standard-scale-0_50x.jpeg' },
+            { id: 'steeve-16', url: '/attached_assets/Steeve Desgagné/GIGA PIXEL 2X steeve-16_54374008415_o1-standard-scale-0_50x.jpeg' },
+            { id: 'steeve-17', url: '/attached_assets/Steeve Desgagné/GIGA PIXEL 2X steeve-17_54372740257_o1-standard-scale-0_50x.jpeg' },
+            { id: 'steeve-18', url: '/attached_assets/Steeve Desgagné/GIGA PIXEL 2X steeve-18_54372738867_o1-standard-scale-0_50x.jpeg' },
+            { id: 'steeve-19', url: '/attached_assets/Steeve Desgagné/GIGA PIXEL 2X steeve-19_54374009680_o1-standard-scale-0_50x.jpeg' },
+            { id: 'steeve-23', url: '/attached_assets/Steeve Desgagné/GIGA PIXEL 2X steeve-23_54373818544_o1-standard-scale-0_50x.jpeg' },
+            { id: 'steeve-25', url: '/attached_assets/Steeve Desgagné/GIGA PIXEL 2X steeve-25_54372738772_o1-standard-scale-0_50x.jpeg' },
+            { id: 'steeve-28', url: '/attached_assets/Steeve Desgagné/GIGA PIXEL 2X steeve-28_54373856383_o1-standard-scale-0_50x.jpeg' },
+            { id: 'steeve-2', url: '/attached_assets/Steeve Desgagné/GIGA PIXEL 2X steeve-2_54374008595_o1-standard-scale-0_50x.jpeg' },
+            { id: 'steeve-33', url: '/attached_assets/Steeve Desgagné/GIGA PIXEL 2X steeve-33_54373857198_o1-standard-scale-0_50x.jpeg' },
+            { id: 'steeve-34', url: '/attached_assets/Steeve Desgagné/GIGA PIXEL 2X steeve-34_54373819469_o1-standard-scale-0_50x.jpeg' },
+            { id: 'steeve-53', url: '/attached_assets/Steeve Desgagné/GIGA PIXEL 2X steeve-53_54373857643_o1-standard-scale-0_50x.jpeg' },
+            { id: 'steeve-6', url: '/attached_assets/Steeve Desgagné/GIGA PIXEL 2X steeve-6_54373856473_o1-standard-scale-0_50x.jpeg' },
+            { id: 'steeve-87', url: '/attached_assets/Steeve Desgagné/GIGA PIXEL 2X steeve-87_54373615761_o1-standard-scale-0_50x.jpeg' },
+            { id: 'steeve-91', url: '/attached_assets/Steeve Desgagné/GIGA PIXEL 2X steeve-91_54373819479_o1-standard-scale-0_50x.jpeg' }
+          ].map(photo => ({
+            id: photo.id,
+            albumId: selectedAlbum.id,
+            name: `Steeve Portrait ${photo.id.split('-')[1]}`,
+            url: photo.url,
+            thumbnailUrl: photo.url,
+            dateAdded: '2024-01-15',
+            width: 1600,
+            height: 1067
+          }));
+          
+          setPhotos(photos);
             {
               id: '102',
               albumId: selectedAlbum.id,
