@@ -3,9 +3,17 @@
 @tailwind utilities;
 
 :root {
-  --glow-red: 0 0 15px rgba(255, 71, 0, 0.7);
-  --glow-blue: 0 0 15px rgba(0, 200, 255, 0.7);
-  --glow-gold: 0 0 15px rgba(255, 216, 74, 0.7);
+  --glow-red: 0 0 20px rgba(255, 71, 0, 0.8);
+  --glow-blue: 0 0 20px rgba(0, 200, 255, 0.8);
+  --glow-gold: 0 0 20px rgba(255, 216, 74, 0.8);
+  --gradient-gold: linear-gradient(45deg, #FFD84A, #F99C28);
+  --gradient-energy: linear-gradient(to right, #C84D2A, #F99C28);
+}
+
+@property --gradient-angle {
+  syntax: '<angle>';
+  initial-value: 0deg;
+  inherits: false;
 }
 
 html {
@@ -44,7 +52,31 @@ body {
 }
 
 .content-box {
-  @apply bg-rock-dark/65 backdrop-blur-md border border-rock-gold rounded-sm shadow-glow-gold;
+  @apply bg-rock-dark/65 backdrop-blur-md border-2 border-rock-gold rounded-sm;
+  position: relative;
+  box-shadow: var(--glow-gold);
+  animation: borderRotate 4s linear infinite;
+}
+
+@keyframes borderRotate {
+  from { --gradient-angle: 0deg; }
+  to { --gradient-angle: 360deg; }
+}
+
+.content-box::before {
+  content: '';
+  position: absolute;
+  inset: -2px;
+  z-index: -1;
+  background: conic-gradient(
+    from var(--gradient-angle),
+    var(--gradient-gold),
+    #C84D2A,
+    var(--gradient-gold)
+  );
+  border-radius: inherit;
+  animation: borderRotate 4s linear infinite;
+  filter: blur(2px);
 }
 
 .menu-item {
@@ -258,15 +290,32 @@ header.header-gradient {
 
 /* Button styles */
 .rock-button {
-  @apply px-6 py-2 font-cinzel uppercase tracking-wider bg-rock-dark border-2 border-rock-gold text-rock-gold font-bold rounded-sm transition-all duration-300;
+  @apply px-6 py-2 font-cinzel uppercase tracking-wider bg-rock-dark/80 border-2 border-rock-gold text-rock-gold font-bold rounded-sm transition-all duration-300;
   text-shadow: 0 0 5px rgba(255, 216, 74, 0.5);
   box-shadow: var(--glow-gold);
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+}
+
+.rock-button::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: var(--gradient-energy);
+  opacity: 0;
+  z-index: -1;
+  transition: opacity 0.3s ease;
 }
 
 .rock-button:hover {
-  @apply bg-gradient-to-r from-rock-energy-start to-rock-energy-end border-rock-gold-warm text-white;
-  transform: translateY(-2px);
-  box-shadow: var(--glow-red);
+  @apply border-rock-gold-warm text-white transform -translate-y-1;
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+  box-shadow: var(--glow-red), 0 5px 15px rgba(200, 77, 42, 0.4);
+}
+
+.rock-button:hover::before {
+  opacity: 1;
 }
 
 /* Text styles */
