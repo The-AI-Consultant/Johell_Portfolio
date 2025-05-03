@@ -1,0 +1,46 @@
+[vite] connecting...
+[vite] connected.
+Instagram is not defined
+at Header (https://6c67b25b-9b28-4c75-aa12-89e1d76e678c-00-wdu7m1z9wlfr.kirk.replit.dev/src/components/Header.tsx:132:46)
+at renderWithHooks (https://6c67b25b-9b28-4c75-aa12-89e1d76e678c-00-wdu7m1z9wlfr.kirk.replit.dev/node_modules/.vite/deps/react-dom_client.js?v=787d1ff2:11548:26)
+at mountIndeterminateComponent (https://6c67b25b-9b28-4c75-aa12-89e1d76e678c-00-wdu7m1z9wlfr.kirk.replit.dev/node_modules/.vite/deps/react-dom_client.js?v=787d1ff2:14926:21)
+at beginWork (https://6c67b25b-9b28-4c75-aa12-89e1d76e678c-00-wdu7m1z9wlfr.kirk.replit.dev/node_modules/.vite/deps/react-dom_client.js?v=787d1ff2:15914:22)
+at HTMLUnknownElement.callCallback2 (https://6c67b25b-9b28-4c75-aa12-89e1d76e678c-00-wdu7m1z9wlfr.kirk.replit.dev/node_modules/.vite/deps/react-dom_client.js?v=787d1ff2:3674:22)
+at Object.invokeGuardedCallbackDev (https://6c67b25b-9b28-4c75-aa12-89e1d76e678c-00-wdu7m1z9wlfr.kirk.replit.dev/node_modules/.vite/deps/react-dom_client.js?v=787d1ff2:3699:24)
+at invokeGuardedCallback (https://6c67b25b-9b28-4c75-aa12-89e1d76e678c-00-wdu7m1z9wlfr.kirk.replit.dev/node_modules/.vite/deps/react-dom_client.js?v=787d1ff2:3733:39)
+at beginWork$1 (https://6c67b25b-9b28-4c75-aa12-89e1d76e678c-00-wdu7m1z9wlfr.kirk.replit.dev/node_modules/.vite/deps/react-dom_client.js?v=787d1ff2:19765:15)
+at performUnitOfWork (https://6c67b25b-9b28-4c75-aa12-89e1d76e678c-00-wdu7m1z9wlfr.kirk.replit.dev/node_modules/.vite/deps/react-dom_client.js?v=787d1ff2:19198:20)
+at workLoopSync (https://6c67b25b-9b28-4c75-aa12-89e1d76e678c-00-wdu7m1z9wlfr.kirk.replit.dev/node_modules/.vite/deps/react-dom_client.js?v=787d1ff2:19137:13)
+Instagram is not defined
+at Header (https://6c67b25b-9b28-4c75-aa12-89e1d76e678c-00-wdu7m1z9wlfr.kirk.replit.dev/src/components/Header.tsx:132:46)
+at renderWithHooks (https://6c67b25b-9b28-4c75-aa12-89e1d76e678c-00-wdu7m1z9wlfr.kirk.replit.dev/node_modules/.vite/deps/react-dom_client.js?v=787d1ff2:11548:26)
+at mountIndeterminateComponent (https://6c67b25b-9b28-4c75-aa12-89e1d76e678c-00-wdu7m1z9wlfr.kirk.replit.dev/node_modules/.vite/deps/react-dom_client.js?v=787d1ff2:14926:21)
+at beginWork (https://6c67b25b-9b28-4c75-aa12-89e1d76e678c-00-wdu7m1z9wlfr.kirk.replit.dev/node_modules/.vite/deps/react-dom_client.js?v=787d1ff2:15914:22)
+at HTMLUnknownElement.callCallback2 (https://6c67b25b-9b28-4c75-aa12-89e1d76e678c-00-wdu7m1z9wlfr.kirk.replit.dev/node_modules/.vite/deps/react-dom_client.js?v=787d1ff2:3674:22)
+at Object.invokeGuardedCallbackDev (https://6c67b25b-9b28-4c75-aa12-89e1d76e678c-00-wdu7m1z9wlfr.kirk.replit.dev/node_modules/.vite/deps/react-dom_client.js?v=787d1ff2:3699:24)
+at invokeGuardedCallback (https://6c67b25b-9b28-4c75-aa12-89e1d76e678c-00-wdu7m1z9wlfr.kirk.replit.dev/node_modules/.vite/deps/react-dom_client.js?v=787d1ff2:3733:39)
+at beginWork$1 (https://6c67b25b-9b28-4c75-aa12-89e1d76e678c-00-wdu7m1z9wlfr.kirk.replit.dev/node_modules/.vite/deps/react-dom_client.js?v=787d1ff2:19765:15)
+at performUnitOfWork (https://6c67b25b-9b28-4c75-aa12-89e1d76e678c-00-wdu7m1z9wlfr.kirk.replit.dev/node_modules/.vite/deps/react-dom_client.js?v=787d1ff2:19198:20)
+at workLoopSync (https://6c67b25b-9b28-4c75-aa12-89e1d76e678c-00-wdu7m1z9wlfr.kirk.replit.dev/node_modules/.vite/deps/react-dom_client.js?v=787d1ff2:19137:13)
+The above error occurred in the <Header> component:
+
+    at Header (https://6c67b25b-9b28-4c75-aa12-89e1d76e678c-00-wdu7m1z9wlfr.kirk.replit.dev/src/components/Header.tsx:24:39)
+    at div
+    at App (https://6c67b25b-9b28-4c75-aa12-89e1d76e678c-00-wdu7m1z9wlfr.kirk.replit.dev/src/App.tsx:31:33)
+    at AuthProvider (https://6c67b25b-9b28-4c75-aa12-89e1d76e678c-00-wdu7m1z9wlfr.kirk.replit.dev/src/context/AuthContext.tsx:32:32)
+
+Consider adding an error boundary to your tree to customize error handling behavior.
+Visit https://reactjs.org/link/error-boundaries to learn more about error boundaries.
+
+at Header (https://6c67b25b-9b28-4c75-aa12-89e1d76e678c-00-wdu7m1z9wlfr.kirk.replit.dev/src/components/Header.tsx:24:39)
+at div
+at App (https://6c67b25b-9b28-4c75-aa12-89e1d76e678c-00-wdu7m1z9wlfr.kirk.replit.dev/src/App.tsx:31:33)
+at AuthProvider (https://6c67b25b-9b28-4c75-aa12-89e1d76e678c-00-wdu7m1z9wlfr.kirk.replit.dev/src/context/AuthContext.tsx:32:32)
+
+Consider adding an error boundary to your tree to customize error handling behavior.
+Visit https://reactjs.org/link/error-boundaries to learn more about error boundaries.
+at t.value (https://6c67b25b-9b28-4c75-aa12-89e1d76e678c-00-wdu7m1z9wlfr.kirk.replit.dev/__replco/static/devtools/eruda/3.2.3/eruda.js:2:17465)
+at new t (https://6c67b25b-9b28-4c75-aa12-89e1d76e678c-00-wdu7m1z9wlfr.kirk.replit.dev/__replco/static/devtools/eruda/3.2.3/eruda.js:2:12630)
+at t.value (https://6c67b25b-9b28-4c75-aa12-89e1d76e678c-00-wdu7m1z9wlfr.kirk.replit.dev/__replco/static/devtools/eruda/3.2.3/eruda.js:2:32766)
+at https://6c67b25b-9b28-4c75-aa12-89e1d76e678c-00-wdu7m1z9wlfr.kirk.replit.dev/__replco/static/devtools/eruda/3.2.3/eruda.js:2:34400
+Instagram is not defined
