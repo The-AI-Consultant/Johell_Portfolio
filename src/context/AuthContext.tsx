@@ -1,4 +1,3 @@
-
 import React, { createContext, useContext, useState, ReactNode } from 'react';
 
 interface User {
@@ -34,7 +33,7 @@ export const AuthProvider: React.FC<{ children: ReactNode }> = ({ children }) =>
 
   const login = (username: string, password: string): boolean => {
     const user = users[username as keyof typeof users];
-    
+
     if (user && user.password === password) {
       setIsAuthenticated(true);
       setIsAdmin(user.role === 'admin');
