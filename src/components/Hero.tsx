@@ -29,11 +29,12 @@ const Hero: React.FC = () => {
       </div>
 
       <div className="relative h-full flex flex-col items-center justify-center z-10">
+        <div className="flex-1" /> {/* Spacer to push content down */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
-          className="text-center px-4 space-y-12 mt-24 backdrop-blur-sm py-8 rounded-lg"
+          className="text-center px-4 space-y-12 mt-48 backdrop-blur-sm py-8 rounded-lg"
         >
           <motion.h2 
             className="text-xl md:text-2xl lg:text-3xl font-cinzel text-rock-gold typewriter-text"
