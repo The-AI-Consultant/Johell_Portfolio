@@ -1,6 +1,7 @@
+
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Settings, X, Upload, FolderPlus, Users } from 'lucide-react';
+import { Settings, X, Upload, FolderPlus, Users, BarChart } from 'lucide-react';
 import { useAuth } from '../../context/AuthContext';
 import UploadForm from './UploadForm';
 import CreateAlbumForm from './CreateAlbumForm';
@@ -8,20 +9,18 @@ import UserManagement from './UserManagement';
 
 const AdminPanel: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const [activeTab, setActiveTab] = useState<'upload' | 'createAlbum' | 'users'>('upload');
-  const { isAuthenticated, isAdmin } = useAuth();
+  const [activeTab, setActiveTab] = useState<'upload' | 'albums' | 'users' | 'metrics'>('upload');
+  const { isAdmin } = useAuth();
 
-  if (!isAuthenticated || !isAdmin) {
-    return null;
-  }
+  if (!isAdmin) return null;
 
   return (
     <>
       <button
-        onClick={() => setIsOpen(!isOpen)}
-        className="fixed bottom-8 right-8 z-40 p-4 bg-rock-gold rounded-full text-rock-black shadow-lg hover:bg-white transition-colors duration-300"
+        onClick={() => setIsOpen(true)}
+        className="fixed bottom-4 right-4 p-3 bg-rock-gold rounded-full shadow-lg hover:bg-rock-gold/80 transition-colors duration-300"
       >
-        {isOpen ? <X className="w-6 h-6" /> : <Settings className="w-6 h-6" />}
+        <Settings className="w-6 h-6 text-rock-black" />
       </button>
 
       <AnimatePresence>
@@ -31,9 +30,9 @@ const AdminPanel: React.FC = () => {
             animate={{ x: 0, opacity: 1 }}
             exit={{ x: '100%', opacity: 0 }}
             transition={{ type: 'spring', damping: 25, stiffness: 300 }}
-            className="fixed top-0 right-0 bottom-0 w-full sm:w-96 bg-rock-dark/95 border-l border-rock-gold z-50 shadow-xl overflow-y-auto"
+            className="fixed inset-0 bg-rock-black/95 z-50"
           >
-            <div className="p-6 min-h-screen">
+            <div className="h-full w-full flex flex-col p-6">
               <div className="flex justify-between items-center mb-6">
                 <h2 className="text-2xl font-cinzel text-rock-gold">Admin Panel</h2>
                 <button
@@ -44,39 +43,56 @@ const AdminPanel: React.FC = () => {
                 </button>
               </div>
 
-              <div className="flex mb-6">
+              <div className="flex border-b border-rock-gold/30 mb-6">
                 <button
                   onClick={() => setActiveTab('upload')}
-                  className={`flex-1 py-2 flex items-center justify-center gap-2 ${
-                    activeTab === 'upload' ? 'bg-rock-gold text-rock-black' : 'bg-rock-black text-rock-gold hover:bg-rock-gold/20'
-                  } transition-colors duration-300`}
+                  className={`flex-1 py-3 px-4 flex items-center justify-center gap-2 ${
+                    activeTab === 'upload' ? 'text-rock-gold border-b-2 border-rock-gold' : 'text-white hover:text-rock-gold'
+                  }`}
                 >
                   <Upload className="w-4 h-4" />
                   Upload
                 </button>
                 <button
-                  onClick={() => setActiveTab('createAlbum')}
-                  className={`flex-1 py-2 flex items-center justify-center gap-2 ${
-                    activeTab === 'createAlbum' ? 'bg-rock-gold text-rock-black' : 'bg-rock-black text-rock-gold hover:bg-rock-gold/20'
-                  } transition-colors duration-300`}
+                  onClick={() => setActiveTab('albums')}
+                  className={`flex-1 py-3 px-4 flex items-center justify-center gap-2 ${
+                    activeTab === 'albums' ? 'text-rock-gold border-b-2 border-rock-gold' : 'text-white hover:text-rock-gold'
+                  }`}
                 >
                   <FolderPlus className="w-4 h-4" />
                   Albums
                 </button>
                 <button
                   onClick={() => setActiveTab('users')}
-                  className={`flex-1 py-2 flex items-center justify-center gap-2 ${
-                    activeTab === 'users' ? 'bg-rock-gold text-rock-black' : 'bg-rock-black text-rock-gold hover:bg-rock-gold/20'
-                  } transition-colors duration-300`}
+                  className={`flex-1 py-3 px-4 flex items-center justify-center gap-2 ${
+                    activeTab === 'users' ? 'text-rock-gold border-b-2 border-rock-gold' : 'text-white hover:text-rock-gold'
+                  }`}
                 >
                   <Users className="w-4 h-4" />
                   Users
                 </button>
+                <button
+                  onClick={() => setActiveTab('metrics')}
+                  className={`flex-1 py-3 px-4 flex items-center justify-center gap-2 ${
+                    activeTab === 'metrics' ? 'text-rock-gold border-b-2 border-rock-gold' : 'text-white hover:text-rock-gold'
+                  }`}
+                >
+                  <BarChart className="w-4 h-4" />
+                  Metrics
+                </button>
               </div>
 
-              {activeTab === 'upload' && <UploadForm />}
-              {activeTab === 'createAlbum' && <CreateAlbumForm />}
-              {activeTab === 'users' && <UserManagement />}
+              <div className="flex-1 overflow-y-auto">
+                {activeTab === 'upload' && <UploadForm />}
+                {activeTab === 'albums' && <CreateAlbumForm />}
+                {activeTab === 'users' && <UserManagement />}
+                {activeTab === 'metrics' && (
+                  <div className="text-white">
+                    <h3 className="text-xl mb-4">Website Metrics</h3>
+                    {/* Add metrics components here */}
+                  </div>
+                )}
+              </div>
             </div>
           </motion.div>
         )}

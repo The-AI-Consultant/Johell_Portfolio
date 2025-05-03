@@ -4,6 +4,8 @@ import { useInView } from 'react-intersection-observer';
 import { Phone, Mail, Instagram, Twitter, Facebook } from 'lucide-react';
 import emailjs from '@emailjs/browser';
 
+emailjs.init("rTKDu98_oIAM2Wp74");
+
 const Contact: React.FC = () => {
   const [formData, setFormData] = useState({
     name: '',
