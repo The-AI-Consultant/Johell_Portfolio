@@ -23,23 +23,15 @@ const Gallery: React.FC = () => {
   // Load albums when component mounts
   useEffect(() => {
     const loadAlbums = async () => {
-      if (isAuthenticated) {
-        try {
-          const token = await getAccessToken();
-          
-          if (token) {
-            const service = await getOneDriveService(token);
-            const albumsData = await service.getAlbums();
-            
-            setAlbums(albumsData);
-          }
-          
-          setLoading(false);
-        } catch (error) {
-          console.error('Error loading albums:', error);
-          setLoading(false);
-        }
-      } else {
+      try {
+        const { adminService } = await import('../services/adminService');
+        const albumsData = adminService.getAlbums();
+        setAlbums(albumsData);
+        setLoading(false);
+      } catch (error) {
+        console.error('Error loading albums:', error);
+        setLoading(false);
+      }
         // Use sample data when not authenticated
         setAlbums([
           {
