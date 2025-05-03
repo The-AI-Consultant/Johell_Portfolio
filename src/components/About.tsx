@@ -35,7 +35,7 @@ const About: React.FC = () => {
       id="a-propos" 
       className="relative py-20 md:py-28 bg-rock-dark"
       style={{
-        backgroundImage: "url('/src/assets/dark-texture.jpg')",
+        backgroundImage: "url('/src/assets/BACKGROUND WEBSITE.png')",
         backgroundSize: 'cover',
         backgroundPosition: 'center',
         backgroundAttachment: 'fixed',

@@ -37,10 +37,11 @@ const Header: React.FC = () => {
           transition={{ duration: 0.5 }}
           className="flex items-center"
         >
-          <Camera className="w-8 h-8 text-rock-gold mr-2" />
-          <span className="text-xl md:text-2xl font-rockSalt text-rock-gold">
-            Johell Kodac
-          </span>
+          <img 
+            src="/src/assets/LOGO johell Kodac.jpg" 
+            alt="Johell Kodac" 
+            className="h-12 w-auto mr-2"
+          />
         </motion.a>
         
         {/* Desktop Navigation */}
