@@ -20,7 +20,7 @@ function App() {
     // Simulate loading resources
     const timer = setTimeout(() => {
       setLoading(false);
-    }, 2000);
+    }, 5000);
     
     return () => clearTimeout(timer);
   }, []);

@@ -5,16 +5,17 @@ import { Camera } from 'lucide-react';
 const LoadingScreen: React.FC = () => {
   return (
     <div className="fixed inset-0 flex flex-col items-center justify-center bg-rock-black z-50">
+      <div className="absolute inset-0 bg-center bg-cover bg-no-repeat opacity-20" style={{ backgroundImage: "url('/attached_assets/BACKGROUND WEBSITE.png')" }} />
       <motion.div
         initial={{ scale: 0.8, opacity: 0 }}
         animate={{ scale: 1, opacity: 1 }}
-        transition={{ duration: 0.5 }}
-        className="mb-8"
+        transition={{ duration: 1.5 }}
+        className="mb-8 relative z-10"
       >
         <img 
           src="/attached_assets/Johell Logo Vector.jpeg"
           alt="Johell Kodac Logo"
-          className="w-32 h-auto mb-4 animate-glow-pulse"
+          className="w-48 h-auto mb-4 animate-glow-pulse"
         />
       </motion.div>
       
