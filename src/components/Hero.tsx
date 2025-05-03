@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { motion } from 'framer-motion';
 import { useTypewriter, Cursor } from 'react-simple-typewriter';
@@ -31,12 +30,12 @@ const Hero: React.FC = () => {
 
       <div className="relative h-full flex flex-col items-center justify-center z-10">
         <div className="flex-1" /> {/* Spacer */}
-        
+
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
-          className="text-center px-4 space-y-8 mt-60"
+          className="text-center px-4 space-y-8 mt-96"
         >
           <motion.h2 
             className="text-xl md:text-2xl lg:text-3xl font-cinzel text-rock-gold typewriter-text"
@@ -54,7 +53,7 @@ const Hero: React.FC = () => {
             </a>
           </motion.div>
         </motion.div>
-        
+
         <div className="flex-1" /> {/* Spacer */}
       </div>
     </div>
