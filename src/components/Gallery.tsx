@@ -102,7 +102,7 @@ const Gallery: React.FC = () => {
             id: 'parabolus-cem',
             name: 'Parabolus CEM',
             description: 'Live at l\'Antirouille',
-            coverImage: '/attached_assets/Parabolus CEM/GIGA PIXEL 2X parabolus-cem-1_54373910828_o1-standard-scale-0_50x.jpeg',
+            coverImage: '/attached_assets/Parabolus CEM/GIGA PIXEL 2X parabolus-4_54373797868_o1-standard-scale-0_50x.jpeg',
             date: '2024-01-15',
             photoCount: 11
           }
