@@ -50,7 +50,7 @@ const Hero: React.FC = () => {
       id="accueil" 
       className="relative min-h-screen flex items-center justify-center overflow-hidden"
       style={{
-        backgroundImage: "url('/attached_assets/BACKGROUND WEBSITE.png')",
+        backgroundImage: "url('/attached_assets/JOHELL_KODAC_HEADER.png')",
         backgroundSize: 'cover',
         backgroundPosition: 'center',
         backgroundRepeat: 'no-repeat',
@@ -59,22 +59,13 @@ const Hero: React.FC = () => {
         imageRendering: 'crisp-edges'
       }}
     >
-      {/* Overlay avec dégradé */}
-      <div className="absolute inset-0 bg-gradient-to-b from-rock-black/70 via-rock-black/50 to-rock-black"></div>
-      
-      {/* Parallax content */}
-      <div 
-        className="absolute inset-0 bg-crowd-silhouette bg-repeat-x bg-bottom opacity-70"
-        style={{ transform: `translateY(${parallaxY}px)` }}
-      ></div>
-      
       {/* Content */}
-      <div className="container mx-auto px-4 z-30 pt-20">
+      <div className="container mx-auto px-4 z-30 flex flex-col justify-center h-full">
         <motion.div
           variants={containerVariants}
           initial="hidden"
           animate="visible"
-          className="text-center"
+          className="text-center mt-48"
         >
           <motion.h2 
             variants={itemVariants}
