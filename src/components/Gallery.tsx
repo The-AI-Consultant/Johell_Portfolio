@@ -49,6 +49,22 @@ const Gallery: React.FC = () => {
             coverImage: '/attached_assets/Steeve Desgagné/GIGA PIXEL 2X steeve-12_54373818634_o1-standard-scale-0_50x.jpeg',
             date: '2024-01-15',
             photoCount: 16
+          },
+          {
+            id: 'phil-lauzon',
+            name: 'Phil Lauzon',
+            description: 'Portrait Session',
+            coverImage: '/attached_assets/Phil Lauzon/GIGA PIXEL 2X phil-lauzon-14_54373814679_o1-standard-scale-0_50x.jpeg',
+            date: '2024-01-15',
+            photoCount: 8
+          },
+          {
+            id: 'quebec-redneck',
+            name: 'Québec Redneck Bluegrass Projet',
+            description: 'Live at Grande Ourse',
+            coverImage: '/attached_assets/Québec redneck bluegrass projet/GIGA PIXEL 2X grande-ourse-14_54374026465_o1-standard-scale-0_50x.jpeg',
+            date: '2024-01-15',
+            photoCount: 11
           }
         ]);
 
@@ -88,8 +104,11 @@ const Gallery: React.FC = () => {
       } else {
         // Use sample data when not authenticated
         setTimeout(() => {
-          const photos = [
-            { id: 'steeve-12', url: '/attached_assets/Steeve Desgagné/GIGA PIXEL 2X steeve-12_54373818634_o1-standard-scale-0_50x.jpeg' },
+          let photos = [];
+          
+          if (selectedAlbum.id === 'steeve-desgagne') {
+            photos = [
+              { id: 'steeve-12', url: '/attached_assets/Steeve Desgagné/GIGA PIXEL 2X steeve-12_54373818634_o1-standard-scale-0_50x.jpeg' },
             { id: 'steeve-15', url: '/attached_assets/Steeve Desgagné/GIGA PIXEL 2X steeve-15_54372738932_o1-standard-scale-0_50x.jpeg' },
             { id: 'steeve-16', url: '/attached_assets/Steeve Desgagné/GIGA PIXEL 2X steeve-16_54374008415_o1-standard-scale-0_50x.jpeg' },
             { id: 'steeve-17', url: '/attached_assets/Steeve Desgagné/GIGA PIXEL 2X steeve-17_54372740257_o1-standard-scale-0_50x.jpeg' },
@@ -116,10 +135,43 @@ const Gallery: React.FC = () => {
             height: 1067
           }));
           
-          setPhotos(photos);
-            {
-              id: '102',
-              albumId: selectedAlbum.id,
+          } else if (selectedAlbum.id === 'phil-lauzon') {
+            photos = [
+              { id: 'phil-14', url: '/attached_assets/Phil Lauzon/GIGA PIXEL 2X phil-lauzon-14_54373814679_o1-standard-scale-0_50x.jpeg' },
+              { id: 'phil-17', url: '/attached_assets/Phil Lauzon/GIGA PIXEL 2X phil-lauzon-17_54373814684_o1-standard-scale-0_50x.jpeg' },
+              { id: 'phil-19', url: '/attached_assets/Phil Lauzon/GIGA PIXEL 2X phil-lauzon-19_54372734902_o1-standard-scale-0_50x.jpeg' },
+              { id: 'phil-35', url: '/attached_assets/Phil Lauzon/GIGA PIXEL 2X phil-lauzon-35_54373814574_o1-standard-scale-0_50x.jpeg' },
+              { id: 'phil-38', url: '/attached_assets/Phil Lauzon/GIGA PIXEL 2X phil-lauzon-38_54373610891_o1-standard-scale-0_50x.jpeg' },
+              { id: 'phil-39', url: '/attached_assets/Phil Lauzon/GIGA PIXEL 2X phil-lauzon-39_54373852253_o1-standard-scale-0_50x.jpeg' },
+              { id: 'phil-40', url: '/attached_assets/Phil Lauzon/GIGA PIXEL 2X phil-lauzon-40_54374004120_o1-standard-scale-0_50x.jpeg' },
+              { id: 'phil-6', url: '/attached_assets/Phil Lauzon/GIGA PIXEL 2X phil-lauzon-6_54374004260_o1-standard-scale-0_50x.jpeg' }
+            ];
+          } else if (selectedAlbum.id === 'quebec-redneck') {
+            photos = [
+              { id: 'qrbp-14', url: '/attached_assets/Québec redneck bluegrass projet/GIGA PIXEL 2X grande-ourse-14_54374026465_o1-standard-scale-0_50x.jpeg' },
+              { id: 'qrbp-19', url: '/attached_assets/Québec redneck bluegrass projet/GIGA PIXEL 2X grande-ourse-19_54372756472_o1-standard-scale-0_50x.jpeg' },
+              { id: 'qrbp-22', url: '/attached_assets/Québec redneck bluegrass projet/GIGA PIXEL 2X grande-ourse-22_54374026315_o1-standard-scale-0_50x.jpeg' },
+              { id: 'qrbp-25', url: '/attached_assets/Québec redneck bluegrass projet/GIGA PIXEL 2X grande-ourse-25_54374026300_o1-standard-scale-0_50x.jpeg' },
+              { id: 'qrbp-27', url: '/attached_assets/Québec redneck bluegrass projet/GIGA PIXEL 2X grande-ourse-27_54373873923_o1-standard-scale-0_50x.jpeg' },
+              { id: 'qrbp-28', url: '/attached_assets/Québec redneck bluegrass projet/GIGA PIXEL 2X grande-ourse-28_54372756337_o1-standard-scale-0_50x.jpeg' },
+              { id: 'qrbp-33', url: '/attached_assets/Québec redneck bluegrass projet/GIGA PIXEL 2X grande-ourse-33_54373632486_o1-standard-scale-0_50x.jpeg' },
+              { id: 'qrbp-37', url: '/attached_assets/Québec redneck bluegrass projet/GIGA PIXEL 2X grande-ourse-37_54373873798_o1-standard-scale-0_50x.jpeg' },
+              { id: 'qrbp-45', url: '/attached_assets/Québec redneck bluegrass projet/GIGA PIXEL 2X grande-ourse-45_54374026155_o1-standard-scale-0_50x.jpeg' },
+              { id: 'qrbp-49', url: '/attached_assets/Québec redneck bluegrass projet/GIGA PIXEL 2X grande-ourse-49_54373632436_o1-standard-scale-0_50x.jpeg' },
+              { id: 'qrbp-55', url: '/attached_assets/Québec redneck bluegrass projet/GIGA PIXEL 2X grande-ourse-55_54373835984_o1-standard-scale-0_50x.jpeg' }
+            ];
+          }
+
+          setPhotos(photos.map(photo => ({
+            id: photo.id,
+            albumId: selectedAlbum.id,
+            name: `${selectedAlbum.name} - ${photo.id}`,
+            url: photo.url,
+            thumbnailUrl: photo.url,
+            dateAdded: '2024-01-15',
+            width: 1600,
+            height: 1067
+          })));
               name: 'Concert Photo 2',
               url: 'https://images.pexels.com/photos/1763075/pexels-photo-1763075.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
               thumbnailUrl: 'https://images.pexels.com/photos/1763075/pexels-photo-1763075.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&dpr=1',
