@@ -4,19 +4,23 @@ import { Camera } from 'lucide-react';
 
 const LoadingScreen: React.FC = () => {
   return (
-    <div className="fixed inset-0 flex flex-col items-center justify-center bg-rock-black z-50">
-      <div className="absolute inset-0 bg-center bg-cover bg-no-repeat opacity-20" style={{ backgroundImage: "url('/attached_assets/BACKGROUND WEBSITE.png')" }} />
+    <div className="fixed inset-0 flex flex-col items-center justify-center bg-rock-black z-50 overflow-hidden">
+      <div className="absolute inset-0 bg-center bg-cover bg-no-repeat opacity-30" style={{ backgroundImage: "url('/attached_assets/BACKGROUND WEBSITE.png')" }} />
+      <div className="absolute inset-0 smoke-effect"></div>
+      <div className="absolute inset-0 smoke-effect-reverse"></div>
       <motion.div
         initial={{ scale: 0.8, opacity: 0 }}
         animate={{ scale: 1, opacity: 1 }}
-        transition={{ duration: 1.5 }}
+        transition={{ duration: 1, type: "spring", stiffness: 100 }}
         className="mb-8 relative z-10"
       >
-        <img 
-          src="/attached_assets/Johell Logo Vector.jpeg"
-          alt="Johell Kodac Logo"
-          className="w-48 h-auto mb-4 animate-glow-pulse"
-        />
+        <div className="glow-wrapper">
+          <img 
+            src="/attached_assets/Johell Logo Vector.jpeg"
+            alt="Johell Kodac Logo"
+            className="w-64 h-auto mb-4 animate-glow-pulse loading-logo"
+          />
+        </div>
       </motion.div>
       
       <motion.h1
