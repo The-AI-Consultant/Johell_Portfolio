@@ -129,6 +129,14 @@ const Gallery: React.FC = () => {
             coverImage: '/attached_assets/Orloge Simard/Orloge-2.JPG',
             date: '2024-01-15',
             photoCount: 14
+          },
+          {
+            id: 'anonymus',
+            name: 'Anonymus',
+            description: 'Live Performance',
+            coverImage: '/attached_assets/Anonymus/Anonymus (1).JPG',
+            date: '2024-01-15',
+            photoCount: 16
           }
         ]);
 
@@ -349,6 +357,25 @@ const Gallery: React.FC = () => {
               { id: 'matante-11', url: '/attached_assets/Matante mutante/Matante mutante-11.JPG' },
               { id: 'matante-12', url: '/attached_assets/Matante mutante/Matante mutante-12.JPG' },
               { id: 'matante-13', url: '/attached_assets/Matante mutante/Matante mutante-13.JPG' }
+            ];
+          } else if (selectedAlbum.id === 'anonymus') {
+            photos = [
+              { id: 'anonymus-1', url: '/attached_assets/Anonymus/Anonymus (1).JPG' },
+              { id: 'anonymus-2', url: '/attached_assets/Anonymus/Anonymus (2).JPG' },
+              { id: 'anonymus-3', url: '/attached_assets/Anonymus/Anonymus (3).JPG' },
+              { id: 'anonymus-4', url: '/attached_assets/Anonymus/Anonymus (4).JPG' },
+              { id: 'anonymus-5', url: '/attached_assets/Anonymus/Anonymus (5).JPG' },
+              { id: 'anonymus-6', url: '/attached_assets/Anonymus/Anonymus (6).JPG' },
+              { id: 'anonymus-7', url: '/attached_assets/Anonymus/Anonymus (7).JPG' },
+              { id: 'anonymus-8', url: '/attached_assets/Anonymus/Anonymus (8).JPG' },
+              { id: 'anonymus-9', url: '/attached_assets/Anonymus/Anonymus (9).JPG' },
+              { id: 'anonymus-10', url: '/attached_assets/Anonymus/Anonymus (10).JPG' },
+              { id: 'anonymus-11', url: '/attached_assets/Anonymus/Anonymus (11).JPG' },
+              { id: 'anonymus-12', url: '/attached_assets/Anonymus/Anonymus (12).JPG' },
+              { id: 'anonymus-13', url: '/attached_assets/Anonymus/Anonymus (13).JPG' },
+              { id: 'anonymus-14', url: '/attached_assets/Anonymus/Anonymus (14).JPG' },
+              { id: 'anonymus-15', url: '/attached_assets/Anonymus/Anonymus (15).JPG' },
+              { id: 'anonymus-16', url: '/attached_assets/Anonymus/Anonymus (16).JPG' }
             ];
           } else if (selectedAlbum.id === 'orloge-simard') {
             photos = [
