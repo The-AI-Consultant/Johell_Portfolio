@@ -12,7 +12,7 @@ const LoadingScreen: React.FC = () => {
         className="mb-8"
       >
         <img 
-          src="/src/assets/LOGO johell Kodac.jpg"
+          src="/attached_assets/LOGO johell Kodac.jpg"
           alt="Johell Kodac Logo"
           className="w-32 h-auto mb-4 animate-glow-pulse"
         />
