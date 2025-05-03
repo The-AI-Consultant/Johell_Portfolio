@@ -58,9 +58,9 @@ const About: React.FC = () => {
           variants={containerVariants}
           initial="hidden"
           animate={inView ? "visible" : "hidden"}
-          className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-center"
+          className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-start max-w-7xl mx-auto"
         >
-          <motion.div variants={itemVariants} className="order-2 md:order-1">
+          <motion.div variants={itemVariants} className="order-2 md:order-1 h-full flex flex-col justify-center">
             <h3 className="text-2xl md:text-3xl font-concert text-rock-gold mb-6">
               Photographe de Scène Passionné
             </h3>
@@ -90,17 +90,18 @@ const About: React.FC = () => {
             </div>
           </motion.div>
           
-          <motion.div variants={itemVariants} className="order-1 md:order-2 flex justify-center">
+          <motion.div variants={itemVariants} className="order-1 md:order-2 flex justify-center h-full">
             <motion.div
               whileHover={{ scale: 1.02 }}
               transition={{ type: 'spring', stiffness: 300 }}
-              className="relative"
+              className="relative w-full max-w-md"
             >
               <div className="absolute -inset-1.5 bg-rock-gold rounded-lg blur opacity-50"></div>
               <img 
                 src="/attached_assets/Profil picture - Joel Tremblay Photographe.jpg" 
                 alt="Johell Kodac" 
-                className="max-w-full h-auto rounded-lg relative z-10" 
+                className="w-full h-full object-cover rounded-lg relative z-10" 
+                style={{ aspectRatio: '4/5' }}
               />
             </motion.div>
           </motion.div>

@@ -83,6 +83,43 @@ body {
   @apply font-cinzel uppercase tracking-wider text-rock-gold hover:text-rock-gold-warm transition-colors duration-300;
 }
 
+/* Section transitions */
+section {
+  position: relative;
+  margin-bottom: 4rem;
+}
+
+section::after {
+  content: '';
+  position: absolute;
+  bottom: -4rem;
+  left: 0;
+  width: 100%;
+  height: 4rem;
+  background: linear-gradient(to bottom, rgba(0,0,0,0.9), transparent);
+  backdrop-filter: blur(4px);
+  z-index: 1;
+}
+
+.section-transition {
+  position: relative;
+  height: 4rem;
+  background: transparent;
+  overflow: hidden;
+}
+
+.section-transition::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  backdrop-filter: blur(8px);
+  background: linear-gradient(to bottom, transparent, rgba(0,0,0,0.8));
+}
+
+
 /* Navigation links */
 .nav-link {
   @apply relative overflow-hidden font-cinzel uppercase tracking-wider;
