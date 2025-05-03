@@ -1,48 +1,28 @@
 
 import { Album, Photo } from '../types';
 
-export class StorageService {
-  private async uploadToStorage(file: File, path: string): Promise<string> {
-    const formData = new FormData();
-    formData.append('file', file);
-    
-    const response = await fetch(`/api/upload/${path}`, {
-      method: 'POST',
-      body: formData
-    });
-    
-    if (!response.ok) {
-      throw new Error('Upload failed');
-    }
-    
-    return await response.text(); // Returns the URL
-  }
+class StorageService {
+  private albums: Album[] = [];
+  private photos: Photo[] = [];
 
   async getAlbums(): Promise<Album[]> {
-    const response = await fetch('/api/albums');
-    if (!response.ok) {
-      throw new Error('Failed to fetch albums');
-    }
-    return await response.json();
+    return this.albums;
   }
 
   async createAlbum(name: string): Promise<Album> {
-    const response = await fetch('/api/albums', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ name })
-    });
-    
-    if (!response.ok) {
-      throw new Error('Failed to create album');
-    }
-    
-    return await response.json();
+    const album: Album = {
+      id: crypto.randomUUID(),
+      name,
+      description: '',
+      date: new Date().toISOString(),
+      photoCount: 0
+    };
+    this.albums.push(album);
+    return album;
   }
 
   async uploadPhoto(albumId: string, file: File): Promise<Photo> {
-    const url = await this.uploadToStorage(file, `albums/${albumId}`);
-    
+    const url = URL.createObjectURL(file);
     const photo: Photo = {
       id: crypto.randomUUID(),
       albumId,
@@ -50,11 +30,34 @@ export class StorageService {
       url,
       thumbnailUrl: url,
       dateAdded: new Date().toISOString(),
-      width: 800, // You can get actual dimensions after upload
+      width: 800,
       height: 600
     };
-    
+    this.photos.push(photo);
     return photo;
+  }
+
+  async getPhotosFromAlbum(albumId: string): Promise<Photo[]> {
+    return this.photos.filter(photo => photo.albumId === albumId);
+  }
+
+  async deletePhoto(photoId: string): Promise<boolean> {
+    const index = this.photos.findIndex(p => p.id === photoId);
+    if (index !== -1) {
+      this.photos.splice(index, 1);
+      return true;
+    }
+    return false;
+  }
+
+  async deleteAlbum(albumId: string): Promise<boolean> {
+    const index = this.albums.findIndex(a => a.id === albumId);
+    if (index !== -1) {
+      this.albums.splice(index, 1);
+      this.photos = this.photos.filter(p => p.albumId !== albumId);
+      return true;
+    }
+    return false;
   }
 }
 
