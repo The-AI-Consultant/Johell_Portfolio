@@ -86,7 +86,7 @@ body {
 /* Section transitions */
 section {
   position: relative;
-  margin-bottom: 6rem;
+  margin-bottom: 2rem;
   isolation: isolate;
 }
 
@@ -94,9 +94,7 @@ section::before {
   content: '';
   position: absolute;
   inset: 0;
-  background: 
-    radial-gradient(circle at 50% 0%, rgba(255,216,74,0.05) 0%, transparent 50%),
-    radial-gradient(circle at 50% 100%, rgba(0,0,0,0.15) 0%, transparent 50%);
+  background: radial-gradient(circle at 50% 50%, rgba(255,216,74,0.05) 0%, transparent 70%);
   mix-blend-mode: overlay;
   pointer-events: none;
   z-index: 1;
@@ -105,38 +103,29 @@ section::before {
 section::after {
   content: '';
   position: absolute;
-  bottom: -6rem;
+  bottom: -2rem;
   left: 0;
   width: 100%;
-  height: 6rem;
-  background: linear-gradient(to bottom, 
-    rgba(0,0,0,0.95) 0%,
-    rgba(0,0,0,0.8) 30%,
-    rgba(0,0,0,0.4) 70%,
-    transparent 100%
-  );
-  backdrop-filter: blur(10px);
+  height: 4rem;
+  background: linear-gradient(180deg, transparent, rgba(0,0,0,0.3));
+  mix-blend-mode: overlay;
   z-index: 2;
 }
 
 .section-transition {
   position: relative;
-  height: 6rem;
+  height: 2rem;
   background: transparent;
   overflow: hidden;
+  margin: -1rem 0;
 }
 
 .section-transition::before {
   content: '';
   position: absolute;
   inset: 0;
-  backdrop-filter: blur(15px);
-  background: linear-gradient(180deg,
-    transparent 0%,
-    rgba(0,0,0,0.6) 30%,
-    rgba(0,0,0,0.8) 70%,
-    rgba(0,0,0,0.95) 100%
-  );
+  backdrop-filter: blur(8px);
+  mix-blend-mode: overlay;
   z-index: 1;
 }
 
