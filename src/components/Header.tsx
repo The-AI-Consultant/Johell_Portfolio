@@ -52,32 +52,32 @@ const Header: React.FC = () => {
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.2 }}
-          className="hidden md:flex items-center space-x-8"
+          className="hidden md:flex items-center justify-center flex-1 px-8"
         >
-          <a href="#accueil" className="text-white hover:text-rock-gold text-lg font-montserrat transition-colors duration-300 link-hover">
+          <a href="#accueil" className="nav-link text-lg font-montserrat mx-8">
             Accueil
           </a>
-          <a href="#a-propos" className="text-white hover:text-rock-gold text-lg font-montserrat transition-colors duration-300 link-hover">
+          <a href="#a-propos" className="nav-link text-lg font-montserrat mx-8">
             À Propos
           </a>
-          <a href="#albums" className="text-white hover:text-rock-gold text-lg font-montserrat transition-colors duration-300 link-hover">
+          <a href="#albums" className="nav-link text-lg font-montserrat mx-8">
             Albums
           </a>
-          <a href="#contact" className="text-white hover:text-rock-gold text-lg font-montserrat transition-colors duration-300 link-hover">
+          <a href="#contact" className="nav-link text-lg font-montserrat mx-8">
             Contact
           </a>
           
           {isAuthenticated ? (
             <button
               onClick={logout}
-              className="rock-button"
+              className="admin-button"
             >
               Déconnexion
             </button>
           ) : (
             <button
               onClick={() => setMobileMenuOpen(false)}
-              className="rock-button"
+              className="admin-button"
               data-toggle="modal"
               data-target="#loginModal"
             >

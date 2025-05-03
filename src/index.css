@@ -104,7 +104,8 @@ body::before {
 
 /* Navigation links */
 .nav-link {
-  @apply relative overflow-hidden font-cinzel uppercase tracking-wider;
+  @apply relative overflow-hidden font-cinzel uppercase tracking-wider text-white;
+  transition: color 0.3s ease, text-shadow 0.3s ease;
 }
 
 .nav-link::after {
@@ -112,18 +113,27 @@ body::before {
   @apply absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-rock-energy-start to-rock-energy-end transition-all duration-300;
 }
 
+.nav-link:hover {
+  @apply text-rock-gold;
+  text-shadow: 0 0 15px rgba(255, 216, 74, 0.4);
+}
+
 .nav-link:hover::after {
   @apply w-full;
   animation: glow 1s ease-in-out infinite alternate;
 }
 
-.nav-link {
-  text-shadow: 0 0 10px rgba(255, 216, 74, 0.3);
-  transition: text-shadow 0.3s ease;
+/* Admin button */
+.admin-button {
+  @apply px-4 py-2 font-cinzel text-sm uppercase tracking-wider text-white/60 hover:text-white/90 transition-all duration-300;
+  background: rgba(0, 0, 0, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 4px;
 }
 
-.nav-link:hover {
-  text-shadow: 0 0 15px rgba(255, 216, 74, 0.8);
+.admin-button:hover {
+  background: rgba(0, 0, 0, 0.5);
+  border-color: rgba(255, 255, 255, 0.2);
 }
 
 .header-gradient {
