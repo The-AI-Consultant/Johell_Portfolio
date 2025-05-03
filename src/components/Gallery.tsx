@@ -289,17 +289,17 @@ const Gallery: React.FC = () => {
             ];
           } else if (selectedAlbum.id === 'parabolus-cem') {
             photos = [
-              { id: 'parabolus-cem-1', url: '/attached_assets/Parabolus CEM/GIGA PIXEL 2X parabolus-cem-1_54373910828_o1-standard-scale-0_50x.jpeg' },
-              { id: 'parabolus-cem-2', url: '/attached_assets/Parabolus CEM/GIGA PIXEL 2X parabolus-cem-2_54373909618_o1-standard-scale-0_50x.jpeg' },
-              { id: 'parabolus-cem-3', url: '/attached_assets/Parabolus CEM/GIGA PIXEL 2X parabolus-cem-3_54373909513_o1-standard-scale-0_50x.jpeg' },
-              { id: 'parabolus-cem-4', url: '/attached_assets/Parabolus CEM/GIGA PIXEL 2X parabolus-cem-4_54373910723_o1-standard-scale-0_50x.jpeg' },
-              { id: 'parabolus-cem-5', url: '/attached_assets/Parabolus CEM/GIGA PIXEL 2X parabolus-cem-5_54373910923_o1-standard-scale-0_50x.jpeg' },
-              { id: 'parabolus-cem-6', url: '/attached_assets/Parabolus CEM/GIGA PIXEL 2X parabolus-cem-6_54373909408_o1-standard-scale-0_50x.jpeg' },
-              { id: 'parabolus-cem-7', url: '/attached_assets/Parabolus CEM/GIGA PIXEL 2X parabolus-cem-7_54373909303_o1-standard-scale-0_50x.jpeg' },
-              { id: 'parabolus-cem-8', url: '/attached_assets/Parabolus CEM/GIGA PIXEL 2X parabolus-cem-8_54373909203_o1-standard-scale-0_50x.jpeg' },
-              { id: 'parabolus-cem-9', url: '/attached_assets/Parabolus CEM/GIGA PIXEL 2X parabolus-cem-9_54373909103_o1-standard-scale-0_50x.jpeg' },
-              { id: 'parabolus-cem-10', url: '/attached_assets/Parabolus CEM/GIGA PIXEL 2X parabolus-cem-10_54373909003_o1-standard-scale-0_50x.jpeg' },
-              { id: 'parabolus-cem-11', url: '/attached_assets/Parabolus CEM/GIGA PIXEL 2X parabolus-cem-11_54373908903_o1-standard-scale-0_50x.jpeg' }
+              { id: 'parabolus-10', url: '/attached_assets/Parabolus CEM/GIGA PIXEL 2X parabolus-10_54373759999_o1-standard-scale-0_50x.jpeg' },
+              { id: 'parabolus-11', url: '/attached_assets/Parabolus CEM/GIGA PIXEL 2X parabolus-11_54373949680_o1-standard-scale-0_50x.jpeg' },
+              { id: 'parabolus-2', url: '/attached_assets/Parabolus CEM/GIGA PIXEL 2X parabolus-2_54373760244_o1-standard-scale-0_50x.jpeg' },
+              { id: 'parabolus-3', url: '/attached_assets/Parabolus CEM/GIGA PIXEL 2X parabolus-3_54372680697_o1-standard-scale-0_50x.jpeg' },
+              { id: 'parabolus-4', url: '/attached_assets/Parabolus CEM/GIGA PIXEL 2X parabolus-4_54373797868_o1-standard-scale-0_50x.jpeg' },
+              { id: 'parabolus-5', url: '/attached_assets/Parabolus CEM/GIGA PIXEL 2X parabolus-5_54373556526_o1-standard-scale-0_50x.jpeg' },
+              { id: 'parabolus-6', url: '/attached_assets/Parabolus CEM/GIGA PIXEL 2X parabolus-6_54373797718_o1-standard-scale-0_50x.jpeg' },
+              { id: 'parabolus-7', url: '/attached_assets/Parabolus CEM/GIGA PIXEL 2X parabolus-7_54373556331_o1-standard-scale-0_50x.jpeg' },
+              { id: 'parabolus-8', url: '/attached_assets/Parabolus CEM/GIGA PIXEL 2X parabolus-8_54373797703_o1-standard-scale-0_50x.jpeg' },
+              { id: 'parabolus-9', url: '/attached_assets/Parabolus CEM/GIGA PIXEL 2X parabolus-9_54372680412_o1-standard-scale-0_50x.jpeg' },
+              { id: 'parabolus', url: '/attached_assets/Parabolus CEM/GIGA PIXEL 2X parabolus_54373797998_o1-standard-scale-0_50x.jpeg' }
             ];
           }
 
