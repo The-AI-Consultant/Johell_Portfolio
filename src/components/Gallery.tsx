@@ -331,6 +331,10 @@ const Gallery: React.FC = () => {
       id="albums" 
       className="py-20 md:py-28 bg-rock-black"
     >
+      <div 
+        className="w-full h-64 md:h-96 mb-12 bg-center bg-cover bg-no-repeat"
+        style={{ backgroundImage: 'url("/attached_assets/JOHELL_KODAC_HEADER.png")' }}
+      />
       <div className="container mx-auto px-4">
         <motion.h2 
           className="section-heading text-center mb-12"
