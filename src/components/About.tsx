@@ -66,11 +66,19 @@ const About: React.FC = () => {
             </h3>
             
             <p className="text-white text-lg mb-4 leading-relaxed">
-              Bonjour! Je suis Johell Kodac, photographe spécialisé dans la capture de l'énergie brute des concerts rock et métal. Avec plus de 15 ans d'expérience, j'immortalise les moments intenses qui définissent l'esprit du rock.
+              C'est en 2022 que Joël commence à s'intéresser à la photographie. Amateur de vidéos de grande qualité graphique, il se dit qu'il aimerait peut-être créer lui-même ses propres images. Armé d'un appareil photo seconde main et de quelques connaissances de base glanées sur Youtube, Joël se lance. Il photographie des paysages, des gens, des animaux. Autodidacte de nature, il s'informe et se perfectionne continuellement.
             </p>
             
+            <p className="text-white text-lg mb-4 leading-relaxed">
+              Il rejoint les rangs du club de photo de Chicoutimi, dont il deviendra rapidement membre du CA. Son talent est indéniable, mais il manque encore cette étincelle. Son créneau.
+            </p>
+
+            <p className="text-white text-lg mb-4 leading-relaxed">
+              C'est quelques mois plus tard, lorsqu'il a l'occasion de photographier un concert rock, que la révélation a lieu! Joël, amateur de musique depuis toujours, peut maintenant concilier ses deux passions, la musique et la photo. En coulisses et parmi la foule, Joël est partout, toujours à l'affût du meilleur cliché.
+            </p>
+
             <p className="text-white text-lg mb-6 leading-relaxed">
-              Ma passion est de saisir l'âme des performances live - ces instants fugaces où la lumière, le son et l'émotion se rencontrent. Chaque image raconte une histoire, préserve un souvenir et célèbre l'art de la scène.
+              Du portrait artistique à la photo d'ensemble qui traduit l'énergie du spectacle, il sait capturer avec brio tous les moments clés de ces soirées. Grâce à son talent naturel, il s'est rapidement taillé une place parmi les grands photographes de la scène théâtrale du Saguenay-Lac-St-Jean. Ne cherchez plus le photographe idéal pour votre événement, Joël avec son oeil artistique, vous garantit des souvenirs grandioses!
             </p>
             
             <div className="grid grid-cols-2 gap-4 mb-6">
@@ -116,7 +124,7 @@ const About: React.FC = () => {
             >
               <div className="absolute -inset-1.5 bg-rock-gold rounded-lg blur opacity-50"></div>
               <img 
-                src="/src/assets/johell-portrait.jpg" 
+                src="/attached_assets/Profil picture - Joel Tremblay Photographe.jpg" 
                 alt="Johell Kodac" 
                 className="max-w-full h-auto rounded-lg relative z-10" 
               />
