@@ -76,10 +76,12 @@ const Header: React.FC = () => {
             </button>
           ) : (
             <button
-              onClick={login}
+              onClick={() => setMobileMenuOpen(false)}
               className="rock-button"
+              data-toggle="modal"
+              data-target="#loginModal"
             >
-              Admin
+              <a href="#admin">Admin</a>
             </button>
           )}
         </motion.nav>

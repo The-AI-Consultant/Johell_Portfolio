@@ -9,6 +9,7 @@ import Footer from './components/Footer';
 import AdminPanel from './components/admin/AdminPanel';
 import { useAuth } from './context/AuthContext';
 import LoadingScreen from './components/LoadingScreen';
+import LoginModal from './components/admin/LoginModal';
 
 function App() {
   const [loading, setLoading] = useState(true);
@@ -53,6 +54,7 @@ function App() {
       />
       
       <Header />
+      <LoginModal />
       
       <main>
         <Hero />
