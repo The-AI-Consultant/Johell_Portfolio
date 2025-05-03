@@ -27,14 +27,15 @@ const Gallery: React.FC = () => {
         const { adminService } = await import('../services/adminService');
         const albumsData = adminService.getAlbums();
         setAlbums(albumsData);
-        setLoading(false);
       } catch (error) {
         console.error('Error loading albums:', error);
+      } finally {
         setLoading(false);
       }
-        // Use sample data when not authenticated
-        setAlbums([
-          {
+    };
+    
+    loadAlbums();
+  }, []);
             id: '1',
             name: 'Metallica 2024',
             description: 'Concert au Stade de France',
