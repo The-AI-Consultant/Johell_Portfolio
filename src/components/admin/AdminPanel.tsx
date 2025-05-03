@@ -17,10 +17,20 @@ const AdminPanel: React.FC = () => {
   
   const handleCreateAlbum = async (albumName: string) => {
     try {
-      const { adminService } = await import('../../services/adminService');
-      const album = adminService.createAlbum(albumName);
-      window.location.reload();
-      return true;
+      const token = await getAccessToken();
+      
+      if (token) {
+        const service = await getOneDriveService(token);
+        const album = await service.createAlbum(albumName);
+        
+        if (album) {
+          // Reload the page to see the new album
+          window.location.reload();
+          return true;
+        }
+      }
+      
+      return false;
     } catch (error) {
       console.error('Error creating album:', error);
       return false;
@@ -29,9 +39,18 @@ const AdminPanel: React.FC = () => {
   
   const handleUploadPhoto = async (albumId: string, file: File) => {
     try {
-      const { adminService } = await import('../../services/adminService');
-      const photo = await adminService.uploadPhoto(albumId, file);
-      return !!photo;
+      const token = await getAccessToken();
+      
+      if (token) {
+        const service = await getOneDriveService(token);
+        const photo = await service.uploadPhoto(albumId, file);
+        
+        if (photo) {
+          return true;
+        }
+      }
+      
+      return false;
     } catch (error) {
       console.error('Error uploading photo:', error);
       return false;
