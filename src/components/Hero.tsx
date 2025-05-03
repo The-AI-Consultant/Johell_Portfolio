@@ -50,7 +50,7 @@ const Hero: React.FC = () => {
       id="accueil" 
       className="relative min-h-screen flex items-center justify-center overflow-hidden"
       style={{
-        backgroundImage: "url('/attached_assets/image_1746274088701.png')",
+        backgroundImage: "url('/attached_assets/JOHELL_KODAC_HEADER.png')",
         backgroundSize: 'cover',
         backgroundPosition: 'center',
         backgroundRepeat: 'no-repeat',
