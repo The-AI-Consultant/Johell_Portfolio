@@ -1,3 +1,4 @@
+
 import React, { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
 import { useTypewriter, Cursor } from 'react-simple-typewriter';
@@ -29,19 +30,17 @@ const Hero: React.FC = () => {
   return (
     <section 
       id="accueil" 
-      className="relative min-h-screen flex items-center justify-center"
+      className="relative w-full h-screen"
       style={{
         backgroundImage: "url('/attached_assets/image_1746274088701.png')",
         backgroundSize: 'cover',
         backgroundPosition: 'center',
-        backgroundRepeat: 'no-repeat',
-        width: '100%',
-        height: '100vh'
+        backgroundRepeat: 'no-repeat'
       }}
     >
       <div className="absolute inset-0 bg-black/30 backdrop-blur-[2px]" />
 
-      <div className="container mx-auto px-4 z-30">
+      <div className="container mx-auto px-4 h-full flex items-center justify-center relative z-30">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
