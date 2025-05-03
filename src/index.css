@@ -66,6 +66,40 @@ body {
   animation: glow 1s ease-in-out infinite alternate;
 }
 
+.nav-link {
+  text-shadow: 0 0 10px rgba(255, 216, 74, 0.3);
+  transition: text-shadow 0.3s ease;
+}
+
+.nav-link:hover {
+  text-shadow: 0 0 15px rgba(255, 216, 74, 0.8);
+}
+
+.header-gradient {
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.95) 0%, rgba(0, 0, 0, 0.7) 50%, rgba(0, 0, 0, 0) 100%);
+  backdrop-filter: blur(5px);
+}
+
+/* Smoke effect */
+.smoke-effect {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: 
+    radial-gradient(circle at 50% 50%, 
+      rgba(255,255,255,0.05) 0%,
+      transparent 50%);
+  filter: blur(50px);
+  pointer-events: none;
+  mix-blend-mode: overlay;
+  animation: smokeMove 20s infinite alternate;
+}
+
+@keyframes smokeMove {
+  0% { transform: translateY(0) scale(1); opacity: 0.5; }
+  100% { transform: translateY(-50px) scale(1.2); opacity: 0.3; }
+}
+
 @keyframes glow {
   from {
     box-shadow: var(--glow-gold);
@@ -119,6 +153,25 @@ body {
   .container {
     @apply px-4;
   }
+
+/* Spotlight effect */
+.spotlight-effect {
+  position: fixed;
+  pointer-events: none;
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(
+    circle at center,
+    rgba(255, 216, 74, 0.15) 0%,
+    rgba(255, 216, 74, 0.05) 30%,
+    transparent 70%
+  );
+  transform: translate(-50%, -50%);
+  mix-blend-mode: screen;
+  z-index: 1;
+  filter: blur(20px);
+}
+
   
   .rock-button {
     @apply py-3 px-5 text-sm;

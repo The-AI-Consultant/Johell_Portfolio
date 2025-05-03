@@ -23,8 +23,8 @@ const Header: React.FC = () => {
   
   const headerClasses = `fixed top-0 left-0 right-0 z-40 transition-all duration-300 ${
     isScrolled 
-      ? 'py-2 bg-rock-black bg-opacity-90 backdrop-blur-md shadow-lg' 
-      : 'py-4 bg-transparent'
+      ? 'py-2 header-gradient shadow-lg' 
+      : 'py-4 header-gradient bg-opacity-50'
   }`;
   
   return (

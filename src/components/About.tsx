@@ -81,38 +81,12 @@ const About: React.FC = () => {
               Du portrait artistique à la photo d'ensemble qui traduit l'énergie du spectacle, il sait capturer avec brio tous les moments clés de ces soirées. Grâce à son talent naturel, il s'est rapidement taillé une place parmi les grands photographes de la scène théâtrale du Saguenay-Lac-St-Jean. Ne cherchez plus le photographe idéal pour votre événement, Joël avec son oeil artistique, vous garantit des souvenirs grandioses!
             </p>
             
-            <div className="grid grid-cols-2 gap-4 mb-6">
-              <motion.div 
-                variants={iconVariants} 
-                className="p-4 bg-black bg-opacity-50 rounded-lg text-center backdrop-blur-sm border border-rock-gold border-opacity-20"
-              >
-                <Camera className="w-10 h-10 mx-auto text-rock-gold mb-2" />
-                <h4 className="text-rock-gold font-semibold">Photographie</h4>
-              </motion.div>
-              
-              <motion.div 
-                variants={iconVariants} 
-                className="p-4 bg-black bg-opacity-50 rounded-lg text-center backdrop-blur-sm border border-rock-gold border-opacity-20"
-              >
-                <Music className="w-10 h-10 mx-auto text-rock-gold mb-2" />
-                <h4 className="text-rock-gold font-semibold">Concerts</h4>
-              </motion.div>
-              
-              <motion.div 
-                variants={iconVariants} 
-                className="p-4 bg-black bg-opacity-50 rounded-lg text-center backdrop-blur-sm border border-rock-gold border-opacity-20"
-              >
-                <Microphone className="w-10 h-10 mx-auto text-rock-gold mb-2" />
-                <h4 className="text-rock-gold font-semibold">Artistes</h4>
-              </motion.div>
-              
-              <motion.div 
-                variants={iconVariants} 
-                className="p-4 bg-black bg-opacity-50 rounded-lg text-center backdrop-blur-sm border border-rock-gold border-opacity-20"
-              >
-                <Video className="w-10 h-10 mx-auto text-rock-gold mb-2" />
-                <h4 className="text-rock-gold font-semibold">Vidéo</h4>
-              </motion.div>
+            <div className="max-w-4xl mx-auto mb-8">
+              <div className="p-6 bg-black bg-opacity-50 rounded-lg backdrop-blur-sm border border-rock-gold border-opacity-20">
+                <p className="text-center text-lg text-rock-gold font-semibold mb-4">
+                  Photographe professionnel spécialisé dans la capture de moments uniques en concert
+                </p>
+              </div>
             </div>
           </motion.div>
           
