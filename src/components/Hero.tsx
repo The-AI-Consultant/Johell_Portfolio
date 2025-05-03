@@ -48,17 +48,18 @@ const Hero: React.FC = () => {
   return (
     <section 
       id="accueil" 
-      className="relative min-h-screen flex items-center justify-center overflow-hidden"
+      className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20"
       style={{
         backgroundImage: "url('/attached_assets/image_1746274088701.png')",
         backgroundSize: 'cover',
         backgroundPosition: 'center',
         backgroundRepeat: 'no-repeat',
-        height: '100vh',
+        height: 'calc(100vh - 80px)',
         width: '100%',
         imageRendering: 'crisp-edges',
         transform: 'translateZ(0)',
-        willChange: 'transform'
+        willChange: 'transform',
+        marginTop: '80px'
       }}
     >
       {/* Content */}
