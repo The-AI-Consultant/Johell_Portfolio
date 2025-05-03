@@ -2,7 +2,7 @@
 // Azure AD (Microsoft identity platform) Configuration
 export const msalConfig = {
   auth: {
-    clientId: process.env.AZURE_CLIENT_ID,
+    clientId: import.meta.env.VITE_AZURE_CLIENT_ID || '',
     authority: "https://login.microsoftonline.com/common",
     redirectUri: window.location.origin,
   },
