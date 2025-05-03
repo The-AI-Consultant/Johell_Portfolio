@@ -67,6 +67,26 @@ const Header: React.FC = () => {
             Contact
           </a>
         </motion.nav>
+
+        {/* Social Media Icons */}
+        <div className="hidden md:flex items-center space-x-4 ml-4">
+          <a 
+            href="https://www.instagram.com/johellkodac/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="w-8 h-8 rounded-full bg-rock-gold/20 flex items-center justify-center hover:bg-rock-gold/40 transition-colors duration-300"
+          >
+            <Instagram className="w-4 h-4 text-rock-gold" />
+          </a>
+          <a 
+            href="https://www.facebook.com/profile.php?id=100083541791749"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="w-8 h-8 rounded-full bg-rock-gold/20 flex items-center justify-center hover:bg-rock-gold/40 transition-colors duration-300"
+          >
+            <Facebook className="w-4 h-4 text-rock-gold" />
+          </a>
+        </div>
         
         {/* Mobile Menu Button */}
         <div className="md:hidden">

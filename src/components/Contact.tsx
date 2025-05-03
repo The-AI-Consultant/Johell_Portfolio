@@ -122,7 +122,7 @@ const Contact: React.FC = () => {
             
             <div className="flex space-x-4">
               <a 
-                href="https://instagram.com" 
+                href="https://www.instagram.com/johellkodac/" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="w-10 h-10 rounded-full bg-rock-gold/20 flex items-center justify-center hover:bg-rock-gold/40 transition-colors duration-300"
@@ -130,8 +130,8 @@ const Contact: React.FC = () => {
                 <Instagram className="w-5 h-5 text-rock-gold" />
               </a>
               <a 
-                href="https://twitter.com" 
-                target="_blank" 
+                href="https://www.facebook.com/profile.php?id=100083541791749"
+                target="_blank"ank" 
                 rel="noopener noreferrer"
                 className="w-10 h-10 rounded-full bg-rock-gold/20 flex items-center justify-center hover:bg-rock-gold/40 transition-colors duration-300"
               >
