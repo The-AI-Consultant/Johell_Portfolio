@@ -43,6 +43,14 @@ const Gallery: React.FC = () => {
         // Use sample data when not authenticated
         setAlbums([
           {
+            id: 'deluge',
+            name: 'Déluge',
+            description: 'Live Performance',
+            coverImage: '/attached_assets/Déluge/GIGA PIXEL 2X dluge-10_54373588771_o1-standard-scale-0_50x.jpeg',
+            date: '2024-01-15',
+            photoCount: 20
+          },
+          {
             id: 'steeve-desgagne',
             name: 'Steeve Desgagné',
             description: 'Portrait Session',
@@ -122,7 +130,39 @@ const Gallery: React.FC = () => {
         setTimeout(() => {
           let photos = [];
 
-          if (selectedAlbum.id === 'steeve-desgagne') {
+          if (selectedAlbum.id === 'deluge') {
+            photos = [
+              { id: 'dluge-10', url: '/attached_assets/Déluge/GIGA PIXEL 2X dluge-10_54373588771_o1-standard-scale-0_50x.jpeg' },
+              { id: 'dluge-12', url: '/attached_assets/Déluge/GIGA PIXEL 2X dluge-12_54373982100_o1-standard-scale-0_50x.jpeg' },
+              { id: 'dluge-2', url: '/attached_assets/Déluge/GIGA PIXEL 2X dluge-2_54373792454_o1-standard-scale-0_50x.jpeg' },
+              { id: 'dluge-3', url: '/attached_assets/Déluge/GIGA PIXEL 2X dluge-3_54373830168_o1-standard-scale-0_50x.jpeg' },
+              { id: 'dluge-4', url: '/attached_assets/Déluge/GIGA PIXEL 2X dluge-4_54372713267_o1-standard-scale-0_50x.jpeg' },
+              { id: 'dluge-5', url: '/attached_assets/Déluge/GIGA PIXEL 2X dluge-5_54373982280_o1-standard-scale-0_50x.jpeg' },
+              { id: 'dluge-6', url: '/attached_assets/Déluge/GIGA PIXEL 2X dluge-6_54373792399_o1-standard-scale-0_50x.jpeg' },
+              { id: 'dluge-7', url: '/attached_assets/Déluge/GIGA PIXEL 2X dluge-7_54373588811_o1-standard-scale-0_50x.jpeg' },
+              { id: 'dluge-8', url: '/attached_assets/Déluge/GIGA PIXEL 2X dluge-8_54373588806_o1-standard-scale-0_50x.jpeg' },
+              { id: 'dluge-9', url: '/attached_assets/Déluge/GIGA PIXEL 2X dluge-9_54373588856_o1-standard-scale-0_50x.jpeg' },
+              { id: 'le-dluge-106', url: '/attached_assets/Déluge/GIGA PIXEL 2X le-dluge_-106_54373981855_o1-standard-scale-0_50x.jpeg' },
+              { id: 'le-dluge-12', url: '/attached_assets/Déluge/GIGA PIXEL 2X le-dluge_-12_54373829943_o1-standard-scale-0_50x.jpeg' },
+              { id: 'le-dluge-32', url: '/attached_assets/Déluge/GIGA PIXEL 2X le-dluge_-32_54373982025_o1-standard-scale-0_50x.jpeg' },
+              { id: 'le-dluge-43', url: '/attached_assets/Déluge/GIGA PIXEL 2X le-dluge_-43_54373982020_o1-standard-scale-0_50x.jpeg' },
+              { id: 'le-dluge-45', url: '/attached_assets/Déluge/GIGA PIXEL 2X le-dluge_-45_54373588616_o1-standard-scale-0_50x.jpeg' },
+              { id: 'le-dluge-56', url: '/attached_assets/Déluge/GIGA PIXEL 2X le-dluge_-56_54372713012_o1-standard-scale-0_50x.jpeg' },
+              { id: 'le-dluge-69', url: '/attached_assets/Déluge/GIGA PIXEL 2X le-dluge_-69_54373981880_o1-standard-scale-0_50x.jpeg' },
+              { id: 'le-dluge-72', url: '/attached_assets/Déluge/GIGA PIXEL 2X le-dluge_-72_54373983890_o1-standard-scale-0_50x.jpeg' },
+              { id: 'le-dluge-73', url: '/attached_assets/Déluge/GIGA PIXEL 2X le-dluge_-73_54373829683_o1-standard-scale-0_50x.jpeg' },
+              { id: 'le-dluge-84', url: '/attached_assets/Déluge/GIGA PIXEL 2X le-dluge_-84_54373981825_o1-standard-scale-0_50x.jpeg' }
+            ].map(photo => ({
+              id: photo.id,
+              albumId: selectedAlbum.id,
+              name: `Déluge Live ${photo.id.split('-')[1] || '1'}`,
+              url: photo.url,
+              thumbnailUrl: photo.url,
+              dateAdded: '2024-01-15',
+              width: 1600,
+              height: 1067
+            }));
+          } else if (selectedAlbum.id === 'steeve-desgagne') {
             photos = [
               { id: 'steeve-12', url: '/attached_assets/Steeve Desgagné/GIGA PIXEL 2X steeve-12_54373818634_o1-standard-scale-0_50x.jpeg' },
             { id: 'steeve-15', url: '/attached_assets/Steeve Desgagné/GIGA PIXEL 2X steeve-15_54372738932_o1-standard-scale-0_50x.jpeg' },
