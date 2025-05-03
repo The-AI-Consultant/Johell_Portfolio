@@ -45,7 +45,7 @@ const Gallery: React.FC = () => {
           {
             id: 'ccr',
             name: 'CCR',
-            description: 'Live Performance',
+            description: 'Performance Live de CCR',
             coverImage: '/attached_assets/CCR/GIGA PIXEL 2X ccr-10_54373572351_o1-standard-scale-0_50x.jpeg',
             date: '2024-01-15',
             photoCount: 10
@@ -53,7 +53,7 @@ const Gallery: React.FC = () => {
           {
             id: 'bruno-rodeo',
             name: 'Bruno Rodéo',
-            description: 'Live Performance',
+            description: 'Performance Live de Bruno Rodéo',
             coverImage: '/attached_assets/Bruno Rodéo/GIGA PIXEL 2X bruno-rodo-108_54373580971_o1-standard-scale-0_50x.jpeg',
             date: '2024-01-15',
             photoCount: 7
@@ -61,7 +61,7 @@ const Gallery: React.FC = () => {
           {
             id: 'deluge',
             name: 'Déluge',
-            description: 'Live Performance',
+            description: 'Performance Live de Déluge',
             coverImage: '/attached_assets/Déluge/GIGA PIXEL 2X dluge-10_54373588771_o1-standard-scale-0_50x.jpeg',
             date: '2024-01-15',
             photoCount: 20
@@ -69,7 +69,7 @@ const Gallery: React.FC = () => {
           {
             id: 'steeve-desgagne',
             name: 'Steeve Desgagné',
-            description: 'Portrait Session',
+            description: 'Séance Portrait',
             coverImage: '/attached_assets/Steeve Desgagné/GIGA PIXEL 2X steeve-12_54373818634_o1-standard-scale-0_50x.jpeg',
             date: '2024-01-15',
             photoCount: 16
@@ -77,7 +77,7 @@ const Gallery: React.FC = () => {
           {
             id: 'phil-lauzon',
             name: 'Phil Lauzon',
-            description: 'Portrait Session',
+            description: 'Séance Portrait',
             coverImage: '/attached_assets/Phil Lauzon/GIGA PIXEL 2X phil-lauzon-14_54373814679_o1-standard-scale-0_50x.jpeg',
             date: '2024-01-15',
             photoCount: 8
@@ -85,7 +85,7 @@ const Gallery: React.FC = () => {
           {
             id: 'quebec-redneck',
             name: 'Québec Redneck Bluegrass Projet',
-            description: 'Live at Grande Ourse',
+            description: 'Performance Live à la Grande Ourse',
             coverImage: '/attached_assets/Québec redneck bluegrass projet/GIGA PIXEL 2X grande-ourse-14_54374026465_o1-standard-scale-0_50x.jpeg',
             date: '2024-01-15',
             photoCount: 11
@@ -93,7 +93,7 @@ const Gallery: React.FC = () => {
           {
             id: 'fantera',
             name: 'Fantera',
-            description: 'Live Performance',
+            description: 'Performance Live de Fantera',
             coverImage: '/attached_assets/Fantera/GIGA PIXEL 2X fantera-12_54372670752_o1-standard-scale-0_50x.jpeg',
             date: '2024-01-15',
             photoCount: 11
@@ -101,7 +101,7 @@ const Gallery: React.FC = () => {
           {
             id: 'parabolus-cem',
             name: 'Parabolus CEM',
-            description: 'Live at l\'Antirouille',
+            description: 'Performance Live à l\'Antirouille',
             coverImage: '/attached_assets/Parabolus CEM/GIGA PIXEL 2X parabolus-4_54373797868_o1-standard-scale-0_50x.jpeg',
             date: '2024-01-15',
             photoCount: 11
@@ -109,7 +109,7 @@ const Gallery: React.FC = () => {
           {
             id: 'parabolus-capitole',
             name: 'Parabolus - Capitole',
-            description: 'Live at Capitole',
+            description: 'Performance Live au Capitole',
             coverImage: '/attached_assets/Parabolus Capitole/parabolus-13_54373958520_o.jpg',
             date: '2024-01-15',
             photoCount: 20
@@ -117,7 +117,7 @@ const Gallery: React.FC = () => {
           {
             id: 'matante-mutante',
             name: 'Matante Mutante',
-            description: 'Live Performance',
+            description: 'Performance Live de Matante Mutante',
             coverImage: '/attached_assets/Matante mutante/Matante mutante.JPG',
             date: '2024-01-15',
             photoCount: 13
@@ -125,7 +125,7 @@ const Gallery: React.FC = () => {
           {
             id: 'orloge-simard',
             name: 'Orloge Simard',
-            description: 'Live Performance',
+            description: 'Performance Live d\'Orloge Simard',
             coverImage: '/attached_assets/Orloge Simard/Orloge-2.JPG',
             date: '2024-01-15',
             photoCount: 14
@@ -133,7 +133,7 @@ const Gallery: React.FC = () => {
           {
             id: 'anonymus',
             name: 'Anonymus',
-            description: 'Live Performance',
+            description: 'Performance Live d\'Anonymus',
             coverImage: '/attached_assets/Anonymus/Anonymus (1).JPG',
             date: '2024-01-15',
             photoCount: 16
