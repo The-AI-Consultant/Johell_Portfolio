@@ -1,5 +1,5 @@
 
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useAuth } from '../../context/AuthContext';
 import Login from './Login';
 
@@ -7,8 +7,19 @@ const LoginModal: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
   const { isAuthenticated } = useAuth();
 
-  if (!isOpen || isAuthenticated) return null;
+  useEffect(() => {
+    const handleHashChange = () => {
+      setIsOpen(window.location.hash === '#admin');
+    };
+    
+    window.addEventListener('hashchange', handleHashChange);
+    handleHashChange();
+    
+    return () => window.removeEventListener('hashchange', handleHashChange);
+  }, []);
 
+  if (!isOpen || isAuthenticated) return null;
+  
   return <Login />;
 };
 

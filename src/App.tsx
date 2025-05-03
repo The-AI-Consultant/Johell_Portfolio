@@ -43,13 +43,14 @@ function App() {
   
   return (
     <div className="relative min-h-screen bg-rock-black overflow-hidden">
-      {/* Dynamic spotlight following cursor */}
+      <div className="bg-texture" />
+      <div className="smoke-effect" />
       <div 
-        className="spotlight animate-spotlight"
+        className="spotlight-effect"
         style={{ 
-          left: mousePosition.x, 
-          top: mousePosition.y,
-          opacity: 0.5
+          left: mousePosition.x || window.innerWidth / 2, 
+          top: mousePosition.y || window.innerHeight / 2,
+          opacity: mousePosition.x ? 0.7 : 0.3
         }}
       />
       
