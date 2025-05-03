@@ -14,26 +14,26 @@ const Gallery: React.FC = () => {
   const [photos, setPhotos] = useState<Photo[]>([]);
   const [loading, setLoading] = useState(true);
   const { isAuthenticated, getAccessToken } = useAuth();
-  
+
   const [ref, inView] = useInView({
     triggerOnce: true,
     threshold: 0.1
   });
-  
+
   // Load albums when component mounts
   useEffect(() => {
     const loadAlbums = async () => {
       if (isAuthenticated) {
         try {
           const token = await getAccessToken();
-          
+
           if (token) {
             const service = await getOneDriveService(token);
             const albumsData = await service.getAlbums();
-            
+
             setAlbums(albumsData);
           }
-          
+
           setLoading(false);
         } catch (error) {
           console.error('Error loading albums:', error);
@@ -91,14 +91,14 @@ const Gallery: React.FC = () => {
             photoCount: 38
           },
         ]);
-        
+
         setLoading(false);
       }
     };
-    
+
     loadAlbums();
   }, [isAuthenticated, getAccessToken]);
-  
+
   // Load photos when an album is selected
   useEffect(() => {
     const loadPhotos = async () => {
@@ -106,20 +106,20 @@ const Gallery: React.FC = () => {
         setPhotos([]);
         return;
       }
-      
+
       setLoading(true);
-      
+
       if (isAuthenticated) {
         try {
           const token = await getAccessToken();
-          
+
           if (token) {
             const service = await getOneDriveService(token);
             const photosData = await service.getPhotosFromAlbum(selectedAlbum.id);
-            
+
             setPhotos(photosData);
           }
-          
+
           setLoading(false);
         } catch (error) {
           console.error('Error loading photos:', error);
@@ -130,14 +130,14 @@ const Gallery: React.FC = () => {
         setTimeout(() => {
           setPhotos([
             {
-              id: '101',
+              id: 'yvan1',
               albumId: selectedAlbum.id,
-              name: 'Concert Photo 1',
-              url: 'https://images.pexels.com/photos/167636/pexels-photo-167636.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
-              thumbnailUrl: 'https://images.pexels.com/photos/167636/pexels-photo-167636.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&dpr=1',
-              dateAdded: '2023-06-15',
-              width: 1200,
-              height: 800
+              name: 'Yvan Portrait 1',
+              url: '/attached_assets/Yvan Pedneault/GIGA PIXEL 2X yvan-1_54373778343_o1-standard-scale-0_50x.jpeg',
+              thumbnailUrl: '/attached_assets/Yvan Pedneault/GIGA PIXEL 2X yvan-1_54373778343_o1-standard-scale-0_50x.jpeg',
+              dateAdded: '2024-01-01',
+              width: 1600,
+              height: 1067
             },
             {
               id: '102',
@@ -194,15 +194,15 @@ const Gallery: React.FC = () => {
         }, 500);
       }
     };
-    
+
     loadPhotos();
   }, [selectedAlbum, isAuthenticated, getAccessToken]);
-  
+
   const handleBackToAlbums = () => {
     setSelectedAlbum(null);
     setPhotos([]);
   };
-  
+
   return (
     <section 
       id="albums" 
@@ -217,7 +217,7 @@ const Gallery: React.FC = () => {
         >
           {selectedAlbum ? selectedAlbum.name : 'Albums Photo'}
         </motion.h2>
-        
+
         <motion.div
           ref={ref}
           initial={{ opacity: 0, y: 30 }}
@@ -236,7 +236,7 @@ const Gallery: React.FC = () => {
                   ← Retour aux Albums
                 </button>
               </div>
-              
+
               <PhotoGrid photos={photos} />
             </>
           ) : (
