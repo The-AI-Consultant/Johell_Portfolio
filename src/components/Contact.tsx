@@ -2,62 +2,45 @@ import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import { Phone, Mail, Instagram, Twitter, Facebook } from 'lucide-react';
+import emailjs from '@emailjs/browser';
 
 const Contact: React.FC = () => {
-  const [formStatus, setFormStatus] = useState<'idle' | 'submitting' | 'success' | 'error'>('idle');
-  const [name, setName] = useState('');
-  const [email, setEmail] = useState('');
-  const [message, setMessage] = useState('');
-  
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    message: ''
+  });
+  const [status, setStatus] = useState<'idle' | 'sending' | 'success' | 'error'>('idle');
+
   const [ref, inView] = useInView({
     triggerOnce: true,
     threshold: 0.1
   });
-  
+
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    setFormStatus('submitting');
-    
-    try {
-      const response = await fetch('https://api.emailjs.com/api/v1.0/email/send', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({
-          service_id: 'default_service',
-          template_id: 'template_default',
-          user_id: 'YOUR_USER_ID', // You'll need to sign up at emailjs.com
-          template_params: {
-            to_email: 'johellkodac@gmail.com',
-            from_name: name,
-            from_email: email,
-            message: message,
-          },
-        }),
-      });
+    setStatus('sending');
 
-      if (response.ok) {
-        setFormStatus('success');
-        setName('');
-        setEmail('');
-        setMessage('');
-        
-        setTimeout(() => {
-          setFormStatus('idle');
-        }, 5000);
-      } else {
-        throw new Error('Failed to send email');
-      }
+    try {
+      await emailjs.send(
+        'default_service', // Service ID - REPLACE WITH YOUR SERVICE ID
+        'template_contact', // Template ID - REPLACE WITH YOUR TEMPLATE ID
+        {
+          from_name: formData.name,
+          from_email: formData.email,
+          message: formData.message,
+          to_email: 'johellkodac@gmail.com'
+        },
+        'YOUR_PUBLIC_KEY' // Public Key - REPLACE WITH YOUR PUBLIC KEY
+      );
+      setStatus('success');
+      setFormData({ name: '', email: '', message: '' });
     } catch (error) {
-      console.error('Error sending email:', error);
-      setFormStatus('error');
-      setTimeout(() => {
-        setFormStatus('idle');
-      }, 5000);
+      setStatus('error');
+      console.error('Email error:', error);
     }
   };
-  
+
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -68,12 +51,12 @@ const Contact: React.FC = () => {
       }
     }
   };
-  
+
   const itemVariants = {
     hidden: { opacity: 0, y: 30 },
     visible: { opacity: 1, y: 0, transition: { duration: 0.6 } }
   };
-  
+
   return (
     <section 
       id="contact" 
@@ -177,11 +160,10 @@ const Contact: React.FC = () => {
                   <input
                     type="text"
                     id="name"
-                    value={name}
-                    onChange={(e) => setName(e.target.value)}
+                    value={formData.name}
+                    onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                     required
                     className="w-full px-4 py-2 bg-rock-black/50 border border-gray-700 rounded-md text-white focus:outline-none focus:border-rock-gold transition-colors duration-300"
-                    disabled={formStatus === 'submitting' || formStatus === 'success'}
                   />
                 </div>
                 
@@ -190,11 +172,10 @@ const Contact: React.FC = () => {
                   <input
                     type="email"
                     id="email"
-                    value={email}
-                    onChange={(e) => setEmail(e.target.value)}
+                    value={formData.email}
+                    onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                     required
                     className="w-full px-4 py-2 bg-rock-black/50 border border-gray-700 rounded-md text-white focus:outline-none focus:border-rock-gold transition-colors duration-300"
-                    disabled={formStatus === 'submitting' || formStatus === 'success'}
                   />
                 </div>
                 
@@ -202,31 +183,27 @@ const Contact: React.FC = () => {
                   <label htmlFor="message" className="block text-rock-gold mb-2">Message</label>
                   <textarea
                     id="message"
-                    value={message}
-                    onChange={(e) => setMessage(e.target.value)}
+                    value={formData.message}
+                    onChange={(e) => setFormData({ ...formData, message: e.target.value })}
                     required
                     rows={5}
                     className="w-full px-4 py-2 bg-rock-black/50 border border-gray-700 rounded-md text-white focus:outline-none focus:border-rock-gold transition-colors duration-300 resize-none"
-                    disabled={formStatus === 'submitting' || formStatus === 'success'}
                   />
                 </div>
                 
                 <button
                   type="submit"
-                  disabled={formStatus === 'submitting' || formStatus === 'success'}
+                  disabled={status === 'sending'}
                   className={`rock-button w-full ${
-                    formStatus === 'submitting' ? 'opacity-70 cursor-not-allowed' : ''
+                    status === 'sending' ? 'opacity-70 cursor-not-allowed' : ''
                   } ${
-                    formStatus === 'success' ? 'bg-green-600 border-green-500 text-white cursor-not-allowed' : ''
+                    status === 'success' ? 'bg-green-600 border-green-500 text-white cursor-not-allowed' : ''
                   }`}
                 >
-                  {formStatus === 'idle' && 'Envoyer'}
-                  {formStatus === 'submitting' && 'Envoi en cours...'}
-                  {formStatus === 'success' && 'Message envoyé!'}
-                  {formStatus === 'error' && 'Erreur - Réessayer'}
+                  {status === 'sending' ? 'Envoi...' : 'Envoyer'}
                 </button>
                 
-                {formStatus === 'success' && (
+                {status === 'success' && (
                   <motion.p
                     initial={{ opacity: 0, y: 10 }}
                     animate={{ opacity: 1, y: 0 }}
@@ -234,6 +211,9 @@ const Contact: React.FC = () => {
                   >
                     Merci pour votre message! Je vous répondrai dès que possible.
                   </motion.p>
+                )}
+                {status === 'error' && (
+                  <p className="text-red-500 text-center mt-4">Une erreur est survenue. Veuillez réessayer.</p>
                 )}
               </form>
             </div>

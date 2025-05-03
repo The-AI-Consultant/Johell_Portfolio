@@ -57,8 +57,8 @@ const AdminPanel: React.FC = () => {
                 <button
                   onClick={() => setActiveTab('createAlbum')}
                   className={`flex-1 py-2 flex items-center justify-center gap-2 ${
-                    activeTab === 'createAlbum' ? 'bg-rock-gold text-rock-black' : 'bg-rock-black text-white'
-                  }`}
+                    activeTab === 'createAlbum' ? 'bg-rock-gold text-rock-black' : 'bg-rock-black text-rock-gold hover:bg-rock-gold/20'
+                  } transition-colors duration-300`}
                 >
                   <FolderPlus className="w-4 h-4" />
                   Albums
@@ -66,8 +66,8 @@ const AdminPanel: React.FC = () => {
                 <button
                   onClick={() => setActiveTab('users')}
                   className={`flex-1 py-2 flex items-center justify-center gap-2 ${
-                    activeTab === 'users' ? 'bg-rock-gold text-rock-black' : 'bg-rock-black text-white'
-                  }`}
+                    activeTab === 'users' ? 'bg-rock-gold text-rock-black' : 'bg-rock-black text-rock-gold hover:bg-rock-gold/20'
+                  } transition-colors duration-300`}
                 >
                   <Users className="w-4 h-4" />
                   Users
