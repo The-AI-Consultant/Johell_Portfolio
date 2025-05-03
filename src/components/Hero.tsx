@@ -1,4 +1,5 @@
-import React, { useEffect, useState } from 'react';
+
+import React from 'react';
 import { motion } from 'framer-motion';
 import { useTypewriter, Cursor } from 'react-simple-typewriter';
 
@@ -17,7 +18,7 @@ const Hero: React.FC = () => {
   return (
     <div className="relative w-full h-screen">
       <div 
-        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+        className="absolute inset-0 bg-cover bg-center bg-no-repeat scale-105"
         style={{
           backgroundImage: "url('/attached_assets/WEBAPP_HEADER_HERO.png')",
           height: '100vh',
@@ -34,12 +35,6 @@ const Hero: React.FC = () => {
           transition={{ duration: 0.8 }}
           className="text-center px-4"
         >
-          <motion.h1 
-            className="text-4xl md:text-6xl lg:text-7xl font-cinzel text-rock-gold mb-8"
-          >
-            À PROPOS DE JOHELL
-          </motion.h1>
-
           <motion.h2 
             className="text-xl md:text-2xl lg:text-3xl font-cinzel text-rock-gold mb-12"
           >
