@@ -1,15 +1,28 @@
+
 import React, { createContext, useContext, useState, ReactNode } from 'react';
+
+interface User {
+  username: string;
+  role: 'admin' | 'dev';
+}
 
 interface AuthContextType {
   isAuthenticated: boolean;
   isAdmin: boolean;
+  currentUser: User | null;
   login: (username: string, password: string) => boolean;
   logout: () => void;
 }
 
+const users = {
+  joel: { username: 'joel', password: 'JK2024admin', role: 'admin' as const },
+  dev: { username: 'dev', password: 'DevKodac2024', role: 'dev' as const }
+};
+
 const AuthContext = createContext<AuthContextType>({
   isAuthenticated: false,
   isAdmin: false,
+  currentUser: null,
   login: () => false,
   logout: () => {},
 });
@@ -17,12 +30,15 @@ const AuthContext = createContext<AuthContextType>({
 export const AuthProvider: React.FC<{ children: ReactNode }> = ({ children }) => {
   const [isAuthenticated, setIsAuthenticated] = useState<boolean>(false);
   const [isAdmin, setIsAdmin] = useState<boolean>(false);
+  const [currentUser, setCurrentUser] = useState<User | null>(null);
 
   const login = (username: string, password: string): boolean => {
-    // Simple authentication for demo purposes
-    if (username === 'admin' && password === 'admin123') {
+    const user = users[username as keyof typeof users];
+    
+    if (user && user.password === password) {
       setIsAuthenticated(true);
-      setIsAdmin(true);
+      setIsAdmin(user.role === 'admin');
+      setCurrentUser({ username: user.username, role: user.role });
       return true;
     }
     return false;
@@ -31,10 +47,11 @@ export const AuthProvider: React.FC<{ children: ReactNode }> = ({ children }) =>
   const logout = (): void => {
     setIsAuthenticated(false);
     setIsAdmin(false);
+    setCurrentUser(null);
   };
 
   return (
-    <AuthContext.Provider value={{ isAuthenticated, isAdmin, login, logout }}>
+    <AuthContext.Provider value={{ isAuthenticated, isAdmin, currentUser, login, logout }}>
       {children}
     </AuthContext.Provider>
   );
