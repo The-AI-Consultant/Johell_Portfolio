@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import { useAuth } from '../context/AuthContext';
-import { getOneDriveService } from '../services/oneDriveService';
+import { storageService } from '../services/storageService';
 import { Album, Photo } from '../types';
 import AlbumGrid from './gallery/AlbumGrid';
 import PhotoGrid from './gallery/PhotoGrid';

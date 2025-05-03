@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { UploadCloud, X, Image } from 'lucide-react';
 import { useAuth } from '../../context/AuthContext';
-import { getOneDriveService } from '../../services/oneDriveService';
+import { storageService } from '../../services/storageService';
 import { Album } from '../../types';
 
 interface UploadFormProps {
