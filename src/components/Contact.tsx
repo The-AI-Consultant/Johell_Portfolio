@@ -63,7 +63,7 @@ const Contact: React.FC = () => {
       
       <div className="container mx-auto px-4 relative z-10">
         <motion.h2 
-          className="section-heading text-center mb-12"
+          className="section-heading text-center mb-16 mt-8"
           initial={{ opacity: 0, y: -20 }}
           animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: -20 }}
           transition={{ duration: 0.6 }}
