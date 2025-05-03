@@ -105,6 +105,14 @@ const Gallery: React.FC = () => {
             coverImage: '/attached_assets/Parabolus CEM/GIGA PIXEL 2X parabolus-4_54373797868_o1-standard-scale-0_50x.jpeg',
             date: '2024-01-15',
             photoCount: 11
+          },
+          {
+            id: 'kain',
+            name: 'Kain',
+            description: 'Live Performance',
+            coverImage: '/attached_assets/Kain/GIGA PIXEL 2X kain-10_54373801459_o1-standard-scale-0_50x.jpeg',
+            date: '2024-01-15',
+            photoCount: 16
           }
         ]);
 
@@ -286,6 +294,25 @@ const Gallery: React.FC = () => {
               { id: 'fantera-14', url: '/attached_assets/Fantera/GIGA PIXEL 2X fantera-14_54373940055_o1-standard-scale-0_50x.jpeg' },
               { id: 'fantera-4-alt', url: '/attached_assets/Fantera/GIGA PIXEL 2X fantera-4_54373546711_o1-standard-scale-0_50x.jpeg' },
               { id: 'fantera-5-alt', url: '/attached_assets/Fantera/GIGA PIXEL 2X fantera-5_54373940040_o1-standard-scale-0_50x.jpeg' }
+            ];
+          } else if (selectedAlbum.id === 'kain') {
+            photos = [
+              { id: 'kain-10', url: '/attached_assets/Kain/GIGA PIXEL 2X kain-10_54373801459_o1-standard-scale-0_50x.jpeg' },
+              { id: 'kain-11', url: '/attached_assets/Kain/GIGA PIXEL 2X kain-11_54373597796_o1-standard-scale-0_50x.jpeg' },
+              { id: 'kain-12', url: '/attached_assets/Kain/GIGA PIXEL 2X kain-12_54373839268_o1-standard-scale-0_50x.jpeg' },
+              { id: 'kain-13', url: '/attached_assets/Kain/GIGA PIXEL 2X kain-13_54373991540_o1-standard-scale-0_50x.jpeg' },
+              { id: 'kain-14', url: '/attached_assets/Kain/GIGA PIXEL 2X kain-14_54373801399_o1-standard-scale-0_50x.jpeg' },
+              { id: 'kain-15', url: '/attached_assets/Kain/GIGA PIXEL 2X kain-15_54372722327_o1-standard-scale-0_50x.jpeg' },
+              { id: 'kain-16', url: '/attached_assets/Kain/GIGA PIXEL 2X kain-16_54373839208_o1-standard-scale-0_50x.jpeg' },
+              { id: 'kain-2', url: '/attached_assets/Kain/GIGA PIXEL 2X kain-2_54373801599_o1-standard-scale-0_50x.jpeg' },
+              { id: 'kain-3', url: '/attached_assets/Kain/GIGA PIXEL 2X kain-3_54372722637_o1-standard-scale-0_50x.jpeg' },
+              { id: 'kain-4', url: '/attached_assets/Kain/GIGA PIXEL 2X kain-4_54373597911_o1-standard-scale-0_50x.jpeg' },
+              { id: 'kain-5', url: '/attached_assets/Kain/GIGA PIXEL 2X kain-5_54373991715_o1-standard-scale-0_50x.jpeg' },
+              { id: 'kain-6', url: '/attached_assets/Kain/GIGA PIXEL 2X kain-6_54372722542_o1-standard-scale-0_50x.jpeg' },
+              { id: 'kain-7', url: '/attached_assets/Kain/GIGA PIXEL 2X kain-7_54373991720_o1-standard-scale-0_50x.jpeg' },
+              { id: 'kain-8', url: '/attached_assets/Kain/GIGA PIXEL 2X kain-8_54373801514_o1-standard-scale-0_50x.jpeg' },
+              { id: 'kain-9', url: '/attached_assets/Kain/GIGA PIXEL 2X kain-9_54373801524_o1-standard-scale-0_50x.jpeg' },
+              { id: 'kain', url: '/attached_assets/Kain/GIGA PIXEL 2X kain_54372722612_o1-standard-scale-0_50x.jpeg' }
             ];
           } else if (selectedAlbum.id === 'parabolus-cem') {
             photos = [
