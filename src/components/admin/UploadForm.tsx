@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 import { UploadCloud, X, Image, FolderPlus } from 'lucide-react';
 import { useAuth } from '../../context/AuthContext';
 import { storageService } from '../../services/storageService';
+import { getOneDriveService } from '../../services/oneDriveService';
 import { Album } from '../../types';
 
 interface UploadFormProps {

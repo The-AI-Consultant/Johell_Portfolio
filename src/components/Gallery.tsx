@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import { useAuth } from '../context/AuthContext';
 import { storageService } from '../services/storageService';
+import { getOneDriveService } from '../services/oneDriveService';
 import { Album, Photo } from '../types';
 import AlbumGrid from './gallery/AlbumGrid';
 import PhotoGrid from './gallery/PhotoGrid';
