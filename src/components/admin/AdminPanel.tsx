@@ -14,9 +14,10 @@ const AdminPanel: React.FC = () => {
     return (
       <button
         onClick={() => window.location.hash = '#admin'}
-        className="fixed bottom-4 left-4 p-2 px-4 bg-black/40 border border-rock-gold/20 text-rock-gold/60 hover:text-rock-gold/90 hover:bg-black/60 hover:border-rock-gold/40 rounded transition-all duration-300 text-sm uppercase tracking-wider font-cinzel"
+        className="fixed bottom-4 left-4 p-2 px-4 bg-black/40 border border-rock-gold/20 text-rock-gold/60 hover:text-rock-gold/90 hover:bg-black/60 hover:border-rock-gold/40 rounded transition-all duration-300 text-sm uppercase tracking-wider font-cinzel flex items-center gap-2"
       >
-        <Settings className="w-6 h-6 text-rock-black" />
+        <Settings className="w-4 h-4" />
+        Admin
       </button>
     );
   }

@@ -37,6 +37,16 @@ const Footer: React.FC = () => {
             </p>
           </motion.div>
         </div>
+        <div className="mt-6 pt-6 border-t border-gray-800">
+          <p className="text-gray-400 text-sm">
+            Ce site utilise uniquement des cookies essentiels au bon fonctionnement. Aucune donnée n'est partagée avec des tiers.
+            Pour retirer votre consentement ou demander la suppression de vos données, contactez : 
+            <a href="mailto:contact@johellkodac.com" className="underline ml-1 text-rock-gold hover:text-rock-gold-warm">contact@johellkodac.com</a>
+          </p>
+          <p className="mt-2 text-gray-500 text-sm">
+            Il est de la responsabilité de l'utilisateur de vérifier les zones de saisie de données personnelles.
+          </p>
+        </div>
       </div>
     </footer>
   );
