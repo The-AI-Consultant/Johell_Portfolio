@@ -40,7 +40,7 @@ const Hero: React.FC = () => {
             stiffness: 100,
             damping: 15
           }}
-          className="text-center px-6 space-y-12 mt-48 backdrop-blur-md py-12 rounded-lg bg-black/20 border border-rock-gold/20"
+          className="text-center px-6 space-y-12 mt-48"
         >
           <motion.h2 
             className="text-xl md:text-2xl lg:text-3xl font-cinzel text-rock-gold typewriter-text"
