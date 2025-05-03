@@ -201,6 +201,32 @@ body {
 }
 
 /* Smoke effect */
+.typewriter-text {
+  position: relative;
+}
+
+.typewriter-text::before {
+  content: '';
+  position: absolute;
+  inset: -20px;
+  background: radial-gradient(circle, rgba(255,216,74,0.2) 0%, transparent 70%);
+  filter: blur(15px);
+  z-index: -1;
+}
+
+.text-glow {
+  text-shadow: 
+    0 0 10px rgba(255,216,74,0.8),
+    0 0 20px rgba(255,216,74,0.5),
+    0 0 30px rgba(255,216,74,0.3);
+  animation: textPulse 2s infinite;
+}
+
+@keyframes textPulse {
+  0%, 100% { text-shadow: 0 0 10px rgba(255,216,74,0.8), 0 0 20px rgba(255,216,74,0.5); }
+  50% { text-shadow: 0 0 15px rgba(255,216,74,0.9), 0 0 25px rgba(255,216,74,0.7); }
+}
+
 .smoke-effect {
   position: fixed;
   top: 0;
