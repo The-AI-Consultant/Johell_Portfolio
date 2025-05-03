@@ -31,11 +31,11 @@ const AdminPanel: React.FC = () => {
             animate={{ x: 0, opacity: 1 }}
             exit={{ x: '100%', opacity: 0 }}
             transition={{ type: 'spring', damping: 25, stiffness: 300 }}
-            className="fixed top-0 right-0 bottom-0 w-full sm:w-96 bg-rock-dark border-l border-rock-gold z-30 shadow-xl overflow-y-auto"
+            className="fixed top-0 right-0 bottom-0 w-full sm:w-96 bg-rock-dark/95 border-l border-rock-gold z-50 shadow-xl overflow-y-auto"
           >
-            <div className="p-6">
+            <div className="p-6 min-h-screen">
               <div className="flex justify-between items-center mb-6">
-                <h2 className="text-2xl font-rockSalt text-rock-gold">Admin Panel</h2>
+                <h2 className="text-2xl font-cinzel text-rock-gold">Admin Panel</h2>
                 <button
                   onClick={() => setIsOpen(false)}
                   className="text-white hover:text-rock-gold transition-colors duration-300"
@@ -48,8 +48,8 @@ const AdminPanel: React.FC = () => {
                 <button
                   onClick={() => setActiveTab('upload')}
                   className={`flex-1 py-2 flex items-center justify-center gap-2 ${
-                    activeTab === 'upload' ? 'bg-rock-gold text-rock-black' : 'bg-rock-black text-white'
-                  }`}
+                    activeTab === 'upload' ? 'bg-rock-gold text-rock-black' : 'bg-rock-black text-rock-gold hover:bg-rock-gold/20'
+                  } transition-colors duration-300`}
                 >
                   <Upload className="w-4 h-4" />
                   Upload
