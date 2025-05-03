@@ -65,6 +65,22 @@ const Gallery: React.FC = () => {
             coverImage: '/attached_assets/Québec redneck bluegrass projet/GIGA PIXEL 2X grande-ourse-14_54374026465_o1-standard-scale-0_50x.jpeg',
             date: '2024-01-15',
             photoCount: 11
+          },
+          {
+            id: 'fantera',
+            name: 'Fantera',
+            description: 'Live Performance',
+            coverImage: '/attached_assets/Fantera/GIGA PIXEL 2X fantera-12_54372670752_o1-standard-scale-0_50x.jpeg',
+            date: '2024-01-15',
+            photoCount: 11
+          },
+          {
+            id: 'parabolus-cem',
+            name: 'Parabolus CEM',
+            description: 'Live at l\'Antirouille',
+            coverImage: '/attached_assets/Parabolus CEM/GIGA PIXEL 2X parabolus-cem-1_54373910828_o1-standard-scale-0_50x.jpeg',
+            date: '2024-01-15',
+            photoCount: 11
           }
         ]);
 
@@ -105,7 +121,7 @@ const Gallery: React.FC = () => {
         // Use sample data when not authenticated
         setTimeout(() => {
           let photos = [];
-          
+
           if (selectedAlbum.id === 'steeve-desgagne') {
             photos = [
               { id: 'steeve-12', url: '/attached_assets/Steeve Desgagné/GIGA PIXEL 2X steeve-12_54373818634_o1-standard-scale-0_50x.jpeg' },
@@ -134,7 +150,7 @@ const Gallery: React.FC = () => {
             width: 1600,
             height: 1067
           }));
-          
+
           } else if (selectedAlbum.id === 'phil-lauzon') {
             photos = [
               { id: 'phil-14', url: '/attached_assets/Phil Lauzon/GIGA PIXEL 2X phil-lauzon-14_54373814679_o1-standard-scale-0_50x.jpeg' },
@@ -160,6 +176,34 @@ const Gallery: React.FC = () => {
               { id: 'qrbp-49', url: '/attached_assets/Québec redneck bluegrass projet/GIGA PIXEL 2X grande-ourse-49_54373632436_o1-standard-scale-0_50x.jpeg' },
               { id: 'qrbp-55', url: '/attached_assets/Québec redneck bluegrass projet/GIGA PIXEL 2X grande-ourse-55_54373835984_o1-standard-scale-0_50x.jpeg' }
             ];
+          } else if (selectedAlbum.id === 'fantera') {
+            photos = [
+              { id: 'fantera-1', url: '/attached_assets/Fantera/GIGA PIXEL 2X fantera_54373750659_o1-standard-scale-0_50x.jpeg' },
+              { id: 'fantera-2', url: '/attached_assets/Fantera/GIGA PIXEL 2X fantera-2_54373940095_o1-standard-scale-0_50x.jpeg' },
+              { id: 'fantera-3', url: '/attached_assets/Fantera/GIGA PIXEL 2X fantera-3_54373546771_o1-standard-scale-0_50x.jpeg' },
+              { id: 'fantera-4', url: '/attached_assets/Fantera/GIGA PIXEL 2X fantera-4_54373545471_o1-standard-scale-0_50x.jpeg' },
+              { id: 'fantera-5', url: '/attached_assets/Fantera/GIGA PIXEL 2X fantera-5_54373749164_o1-standard-scale-0_50x.jpeg' },
+              { id: 'fantera-6', url: '/attached_assets/Fantera/GIGA PIXEL 2X fantera-6_54373940030_o1-standard-scale-0_50x.jpeg' },
+              { id: 'fantera-8', url: '/attached_assets/Fantera/GIGA PIXEL 2X fantera-8_54373787938_o1-standard-scale-0_50x.jpeg' },
+              { id: 'fantera-12', url: '/attached_assets/Fantera/GIGA PIXEL 2X fantera-12_54372670752_o1-standard-scale-0_50x.jpeg' },
+              { id: 'fantera-14', url: '/attached_assets/Fantera/GIGA PIXEL 2X fantera-14_54373940055_o1-standard-scale-0_50x.jpeg' },
+              { id: 'fantera-4-alt', url: '/attached_assets/Fantera/GIGA PIXEL 2X fantera-4_54373546711_o1-standard-scale-0_50x.jpeg' },
+              { id: 'fantera-5-alt', url: '/attached_assets/Fantera/GIGA PIXEL 2X fantera-5_54373940040_o1-standard-scale-0_50x.jpeg' }
+            ];
+          } else if (selectedAlbum.id === 'parabolus-cem') {
+            photos = [
+              { id: 'parabolus-cem-1', url: '/attached_assets/Parabolus CEM/GIGA PIXEL 2X parabolus-cem-1_54373910828_o1-standard-scale-0_50x.jpeg' },
+              { id: 'parabolus-cem-2', url: '/attached_assets/Parabolus CEM/GIGA PIXEL 2X parabolus-cem-2_54373909618_o1-standard-scale-0_50x.jpeg' },
+              { id: 'parabolus-cem-3', url: '/attached_assets/Parabolus CEM/GIGA PIXEL 2X parabolus-cem-3_54373909513_o1-standard-scale-0_50x.jpeg' },
+              { id: 'parabolus-cem-4', url: '/attached_assets/Parabolus CEM/GIGA PIXEL 2X parabolus-cem-4_54373910723_o1-standard-scale-0_50x.jpeg' },
+              { id: 'parabolus-cem-5', url: '/attached_assets/Parabolus CEM/GIGA PIXEL 2X parabolus-cem-5_54373910923_o1-standard-scale-0_50x.jpeg' },
+              { id: 'parabolus-cem-6', url: '/attached_assets/Parabolus CEM/GIGA PIXEL 2X parabolus-cem-6_54373909408_o1-standard-scale-0_50x.jpeg' },
+              { id: 'parabolus-cem-7', url: '/attached_assets/Parabolus CEM/GIGA PIXEL 2X parabolus-cem-7_54373909303_o1-standard-scale-0_50x.jpeg' },
+              { id: 'parabolus-cem-8', url: '/attached_assets/Parabolus CEM/GIGA PIXEL 2X parabolus-cem-8_54373909203_o1-standard-scale-0_50x.jpeg' },
+              { id: 'parabolus-cem-9', url: '/attached_assets/Parabolus CEM/GIGA PIXEL 2X parabolus-cem-9_54373909103_o1-standard-scale-0_50x.jpeg' },
+              { id: 'parabolus-cem-10', url: '/attached_assets/Parabolus CEM/GIGA PIXEL 2X parabolus-cem-10_54373909003_o1-standard-scale-0_50x.jpeg' },
+              { id: 'parabolus-cem-11', url: '/attached_assets/Parabolus CEM/GIGA PIXEL 2X parabolus-cem-11_54373908903_o1-standard-scale-0_50x.jpeg' }
+            ];
           }
 
           setPhotos(photos.map(photo => ({
@@ -172,54 +216,6 @@ const Gallery: React.FC = () => {
             width: 1600,
             height: 1067
           })));
-              name: 'Concert Photo 2',
-              url: 'https://images.pexels.com/photos/1763075/pexels-photo-1763075.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
-              thumbnailUrl: 'https://images.pexels.com/photos/1763075/pexels-photo-1763075.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&dpr=1',
-              dateAdded: '2023-06-15',
-              width: 1200,
-              height: 800
-            },
-            {
-              id: '103',
-              albumId: selectedAlbum.id,
-              name: 'Concert Photo 3',
-              url: 'https://images.pexels.com/photos/1540406/pexels-photo-1540406.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
-              thumbnailUrl: 'https://images.pexels.com/photos/1540406/pexels-photo-1540406.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&dpr=1',
-              dateAdded: '2023-06-15',
-              width: 1200,
-              height: 800
-            },
-            {
-              id: '104',
-              albumId: selectedAlbum.id,
-              name: 'Concert Photo 4',
-              url: 'https://images.pexels.com/photos/144429/pexels-photo-144429.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
-              thumbnailUrl: 'https://images.pexels.com/photos/144429/pexels-photo-144429.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&dpr=1',
-              dateAdded: '2023-06-15',
-              width: 1200,
-              height: 800
-            },
-            {
-              id: '105',
-              albumId: selectedAlbum.id,
-              name: 'Concert Photo 5',
-              url: 'https://images.pexels.com/photos/2078076/pexels-photo-2078076.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
-              thumbnailUrl: 'https://images.pexels.com/photos/2078076/pexels-photo-2078076.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&dpr=1',
-              dateAdded: '2023-06-15',
-              width: 1200,
-              height: 800
-            },
-            {
-              id: '106',
-              albumId: selectedAlbum.id,
-              name: 'Concert Photo 6',
-              url: 'https://images.pexels.com/photos/1494062/pexels-photo-1494062.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
-              thumbnailUrl: 'https://images.pexels.com/photos/1494062/pexels-photo-1494062.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&dpr=1',
-              dateAdded: '2023-06-15',
-              width: 1200,
-              height: 800
-            },
-          ]);
           setLoading(false);
         }, 500);
       }
