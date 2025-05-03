@@ -13,22 +13,22 @@ const Hero: React.FC = () => {
     loop: true,
     delaySpeed: 2000,
   });
-  
+
   const [parallaxY, setParallaxY] = useState(0);
-  
+
   useEffect(() => {
     const handleScroll = () => {
       const scrollY = window.scrollY;
       setParallaxY(scrollY * 0.4);
     };
-    
+
     window.addEventListener('scroll', handleScroll);
-    
+
     return () => {
       window.removeEventListener('scroll', handleScroll);
     };
   }, []);
-  
+
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -39,18 +39,18 @@ const Hero: React.FC = () => {
       }
     }
   };
-  
+
   const itemVariants = {
     hidden: { opacity: 0, y: 20 },
     visible: { opacity: 1, y: 0, transition: { duration: 0.6 } }
   };
-  
+
   return (
     <section 
       id="accueil" 
       className="relative min-h-screen flex items-center justify-center overflow-hidden"
       style={{
-        backgroundImage: "url('/attached_assets/JOHELL_KODAC_HEADER.png')",
+        backgroundImage: "url('/attached_assets/image_1746274088701.png')",
         backgroundSize: 'cover',
         backgroundPosition: 'center',
         backgroundRepeat: 'no-repeat',
@@ -76,7 +76,7 @@ const Hero: React.FC = () => {
             <span>{text}</span>
             <Cursor cursorColor="#FFD84A" />
           </motion.h2>
-          
+
           <motion.div variants={itemVariants}>
             <a 
               href="#albums" 
@@ -87,7 +87,7 @@ const Hero: React.FC = () => {
           </motion.div>
         </motion.div>
       </div>
-      
+
       {/* Effets de lumière */}
       <div className="absolute top-0 left-1/4 w-96 h-96 rounded-full bg-rock-blue opacity-20 blur-3xl"></div>
       <div className="absolute top-1/4 right-1/4 w-64 h-64 rounded-full bg-rock-red opacity-20 blur-3xl"></div>
