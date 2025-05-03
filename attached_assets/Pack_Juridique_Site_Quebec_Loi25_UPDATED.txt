@@ -1,0 +1,67 @@
+
+Pack Juridique – Site Web conforme au Québec (Loi 25)
+
+1. Politique de confidentialité
+Dernière mise à jour : [Date]
+Responsable : [Nom et coordonnées]
+
+Nous collectons les renseignements suivants :
+- Nom, adresse électronique, numéro de téléphone, adresse IP, données de navigation.
+
+Utilisation :
+- Fournir et améliorer nos services, communication, obligations légales.
+
+Conservation :
+- Données conservées pour la durée nécessaire selon Loi 25.
+
+Droits :
+- Accès, rectification, suppression et retrait du consentement.
+
+Sécurité :
+- Mesures pour prévenir accès non autorisé, divulgation, modification ou perte.
+
+
+2. Conditions Générales d’Utilisation (CGU)
+Dernière mise à jour : [Date]
+
+Acceptation :
+- L’accès au site implique acceptation des présentes conditions.
+
+Utilisation :
+- Ne pas utiliser le site à des fins illégales.
+
+Propriété intellectuelle :
+- Contenu protégé appartenant à [Nom de l’entreprise].
+
+Limitation de responsabilité :
+- Pas responsable des dommages résultant de l’usage du site.
+
+Modifications :
+- CGU sujettes à modification sans préavis.
+
+
+3. Politique de cookies
+
+Qu’est-ce qu’un cookie ?
+- Fichier texte stocké sur l’appareil de l’utilisateur.
+
+Utilisation :
+- Amélioration UX, analyse de trafic, personnalisation.
+
+Consentement :
+- Nécessité d’un consentement explicite via bannière.
+
+Gestion :
+- Navigateur permet de refuser ou gérer les cookies.
+
+
+4. Désactivation du suivi et retrait du consentement
+
+Le site utilise uniquement des fichiers témoins (cookies) essentiels au bon fonctionnement du service. 
+Aucun témoin publicitaire ou de traçage externe n’est activé sans votre consentement explicite.
+
+Si vous souhaitez retirer votre consentement, corriger ou supprimer vos renseignements personnels, 
+vous pouvez en faire la demande par courriel à : admin@votresite.com.
+
+Il est de la responsabilité de l’utilisateur de vérifier les sections pertinentes du site 
+(formulaires, zones de saisie) pour éviter la saisie de données personnelles non nécessaires.
