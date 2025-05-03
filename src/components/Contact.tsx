@@ -26,12 +26,12 @@ const Contact: React.FC = () => {
     try {
       await emailjs.send(
         'service_h7nkuk2',
-        'template_contact',
+        'template_y1gfawk',
         {
           from_name: formData.name,
-          from_email: formData.email,
+          reply_to: formData.email,
           message: formData.message,
-          to_email: 'johellkodac@gmail.com'
+          to_name: 'Johell Kodac'
         },
         'rTKDu98_oIAM2Wp74'
       );
