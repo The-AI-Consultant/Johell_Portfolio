@@ -43,6 +43,22 @@ const Gallery: React.FC = () => {
         // Use sample data when not authenticated
         setAlbums([
           {
+            id: 'ccr',
+            name: 'CCR',
+            description: 'Live Performance',
+            coverImage: '/attached_assets/CCR/GIGA PIXEL 2X ccr-10_54373572351_o1-standard-scale-0_50x.jpeg',
+            date: '2024-01-15',
+            photoCount: 10
+          },
+          {
+            id: 'bruno-rodeo',
+            name: 'Bruno Rodéo',
+            description: 'Live Performance',
+            coverImage: '/attached_assets/Bruno Rodéo/GIGA PIXEL 2X bruno-rodo-108_54373580971_o1-standard-scale-0_50x.jpeg',
+            date: '2024-01-15',
+            photoCount: 7
+          },
+          {
             id: 'deluge',
             name: 'Déluge',
             description: 'Live Performance',
@@ -130,7 +146,48 @@ const Gallery: React.FC = () => {
         setTimeout(() => {
           let photos = [];
 
-          if (selectedAlbum.id === 'deluge') {
+          if (selectedAlbum.id === 'ccr') {
+            photos = [
+              { id: 'ccr-10', url: '/attached_assets/CCR/GIGA PIXEL 2X ccr-10_54373572351_o1-standard-scale-0_50x.jpeg' },
+              { id: 'ccr-2', url: '/attached_assets/CCR/GIGA PIXEL 2X ccr-2_54373572411_o1-standard-scale-0_50x.jpeg' },
+              { id: 'ccr-3', url: '/attached_assets/CCR/GIGA PIXEL 2X ccr-3_54372696972_o1-standard-scale-0_50x.jpeg' },
+              { id: 'ccr-4', url: '/attached_assets/CCR/GIGA PIXEL 2X ccr-4_54373965805_o1-standard-scale-0_50x.jpeg' },
+              { id: 'ccr-5', url: '/attached_assets/CCR/GIGA PIXEL 2X ccr-5_54373776269_o1-standard-scale-0_50x.jpeg' },
+              { id: 'ccr-6', url: '/attached_assets/CCR/GIGA PIXEL 2X ccr-6_54373813978_o1-standard-scale-0_50x.jpeg' },
+              { id: 'ccr-7', url: '/attached_assets/CCR/GIGA PIXEL 2X ccr-7_54372696937_o1-standard-scale-0_50x.jpeg' },
+              { id: 'ccr-8', url: '/attached_assets/CCR/GIGA PIXEL 2X ccr-8_54373813943_o1-standard-scale-0_50x.jpeg' },
+              { id: 'ccr-9', url: '/attached_assets/CCR/GIGA PIXEL 2X ccr-9_54373572301_o1-standard-scale-0_50x.jpeg' },
+              { id: 'ccr', url: '/attached_assets/CCR/GIGA PIXEL 2X ccr_54372697132_o1-standard-scale-0_50x.jpeg' }
+            ].map(photo => ({
+              id: photo.id,
+              albumId: selectedAlbum.id,
+              name: `CCR Live ${photo.id.split('-')[1] || '1'}`,
+              url: photo.url,
+              thumbnailUrl: photo.url,
+              dateAdded: '2024-01-15',
+              width: 1600,
+              height: 1067
+            }));
+          } else if (selectedAlbum.id === 'bruno-rodeo') {
+            photos = [
+              { id: 'bruno-108', url: '/attached_assets/Bruno Rodéo/GIGA PIXEL 2X bruno-rodo-108_54373580971_o1-standard-scale-0_50x.jpeg' },
+              { id: 'bruno-124', url: '/attached_assets/Bruno Rodéo/GIGA PIXEL 2X bruno-rodo-124_54372705157_o1-standard-scale-0_50x.jpeg' },
+              { id: 'bruno-55', url: '/attached_assets/Bruno Rodéo/GIGA PIXEL 2X bruno-rodo-55_54372705382_o1-standard-scale-0_50x.jpeg' },
+              { id: 'bruno-67', url: '/attached_assets/Bruno Rodéo/GIGA PIXEL 2X bruno-rodo-67_54372705272_o1-standard-scale-0_50x.jpeg' },
+              { id: 'bruno-89', url: '/attached_assets/Bruno Rodéo/GIGA PIXEL 2X bruno-rodo-89_54373784509_o1-standard-scale-0_50x.jpeg' },
+              { id: 'bruno-95', url: '/attached_assets/Bruno Rodéo/GIGA PIXEL 2X bruno-rodo-95_54373580946_o1-standard-scale-0_50x.jpeg' },
+              { id: 'bruno-97', url: '/attached_assets/Bruno Rodéo/GIGA PIXEL 2X bruno-rodo-97_54373974210_o1-standard-scale-0_50x.jpeg' }
+            ].map(photo => ({
+              id: photo.id,
+              albumId: selectedAlbum.id,
+              name: `Bruno Rodéo Live ${photo.id.split('-')[1]}`,
+              url: photo.url,
+              thumbnailUrl: photo.url,
+              dateAdded: '2024-01-15',
+              width: 1600,
+              height: 1067
+            }));
+          } else if (selectedAlbum.id === 'deluge') {
             photos = [
               { id: 'dluge-10', url: '/attached_assets/Déluge/GIGA PIXEL 2X dluge-10_54373588771_o1-standard-scale-0_50x.jpeg' },
               { id: 'dluge-12', url: '/attached_assets/Déluge/GIGA PIXEL 2X dluge-12_54373982100_o1-standard-scale-0_50x.jpeg' },
