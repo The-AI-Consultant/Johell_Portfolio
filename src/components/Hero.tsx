@@ -33,8 +33,14 @@ const Hero: React.FC = () => {
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.2 }}
-          className="text-center px-4 space-y-12 mt-48 backdrop-blur-sm py-8 rounded-lg"
+          transition={{ 
+            duration: 1.2,
+            delay: 0.3,
+            type: "spring",
+            stiffness: 100,
+            damping: 15
+          }}
+          className="text-center px-6 space-y-12 mt-48 backdrop-blur-md py-12 rounded-lg bg-black/20 border border-rock-gold/20"
         >
           <motion.h2 
             className="text-xl md:text-2xl lg:text-3xl font-cinzel text-rock-gold typewriter-text"
