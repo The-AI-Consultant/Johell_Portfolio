@@ -400,6 +400,31 @@ header.header-gradient {
 }
 
 /* Text styles */
+/* Metallic text effect */
+.metallic-text {
+  background: linear-gradient(to bottom, #ffffff 0%, #FFD84A 50%, #B8860B 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  text-shadow: 
+    2px 2px 4px rgba(0,0,0,0.4),
+    -2px -2px 4px rgba(255,216,74,0.2),
+    0 0 20px rgba(255,216,74,0.6),
+    0 0 40px rgba(255,216,74,0.4),
+    0 0 60px rgba(255,216,74,0.2);
+  position: relative;
+  animation: textShine 3s ease-in-out infinite;
+}
+
+@keyframes textShine {
+  0%, 100% {
+    filter: brightness(1) contrast(1.2);
+  }
+  50% {
+    filter: brightness(1.2) contrast(1.4);
+  }
+}
+
 /* Enhanced text styles */
 .title-text {
   @apply font-cinzel font-black uppercase tracking-wider text-rock-gold;

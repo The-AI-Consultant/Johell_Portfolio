@@ -40,10 +40,13 @@ const Hero: React.FC = () => {
             stiffness: 100,
             damping: 15
           }}
-          className="text-center px-6 space-y-12 mt-48"
+          className="text-center px-6 space-y-12 mt-48 relative"
         >
+          <div className="absolute top-0 left-0 right-0 text-center">
+            <h1 className="text-6xl md:text-7xl lg:text-8xl font-cinzel metallic-text">JOHELL KODAC</h1>
+          </div>
           <motion.h2 
-            className="text-xl md:text-2xl lg:text-3xl font-cinzel text-rock-gold typewriter-text glow-text"
+            className="text-xl md:text-2xl lg:text-3xl font-cinzel text-rock-gold typewriter-text glow-text relative z-10 mt-32"
           >
             <span className="text-glow">{text}</span>
             <Cursor cursorColor="#FFD84A" />
