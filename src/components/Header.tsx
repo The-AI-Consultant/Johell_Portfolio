@@ -39,7 +39,7 @@ const Header: React.FC = () => {
         >
           <div className="flex items-center">
             <img 
-              src="/attached_assets/LOGO johell Kodac.jpg" 
+              src="/attached_assets/Johell Logo Vector.jpeg" 
               alt="Johell Kodac Logo" 
               className="h-16 w-auto mr-2"
             />
