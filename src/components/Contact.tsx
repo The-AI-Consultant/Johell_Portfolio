@@ -14,22 +14,48 @@ const Contact: React.FC = () => {
     threshold: 0.1
   });
   
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setFormStatus('submitting');
     
-    // Simulate form submission
-    setTimeout(() => {
-      setFormStatus('success');
-      setName('');
-      setEmail('');
-      setMessage('');
-      
-      // Reset form status after 5 seconds
+    try {
+      const response = await fetch('https://api.emailjs.com/api/v1.0/email/send', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          service_id: 'default_service',
+          template_id: 'template_default',
+          user_id: 'YOUR_USER_ID', // You'll need to sign up at emailjs.com
+          template_params: {
+            to_email: 'johellkodac@gmail.com',
+            from_name: name,
+            from_email: email,
+            message: message,
+          },
+        }),
+      });
+
+      if (response.ok) {
+        setFormStatus('success');
+        setName('');
+        setEmail('');
+        setMessage('');
+        
+        setTimeout(() => {
+          setFormStatus('idle');
+        }, 5000);
+      } else {
+        throw new Error('Failed to send email');
+      }
+    } catch (error) {
+      console.error('Error sending email:', error);
+      setFormStatus('error');
       setTimeout(() => {
         setFormStatus('idle');
       }, 5000);
-    }, 1500);
+    }
   };
   
   const containerVariants = {
