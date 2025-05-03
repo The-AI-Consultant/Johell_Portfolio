@@ -1,0 +1,114 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --glow-red: 0 0 15px rgba(255, 71, 0, 0.7);
+  --glow-blue: 0 0 15px rgba(0, 200, 255, 0.7);
+  --glow-gold: 0 0 15px rgba(255, 216, 74, 0.7);
+}
+
+html {
+  scroll-behavior: smooth;
+  scrollbar-width: thin;
+  scrollbar-color: #FFD84A #0B0B0B;
+}
+
+body {
+  @apply bg-rock-black text-white font-roboto;
+  margin: 0;
+  overflow-x: hidden;
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-rock-dark;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-rock-gold rounded-full;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-rock-gold-warm;
+}
+
+/* Common components */
+.section-heading {
+  @apply text-4xl md:text-5xl lg:text-6xl font-cinzel font-black uppercase text-rock-gold my-8 relative tracking-wider;
+  text-shadow: 0 0 15px rgba(255, 216, 74, 0.5);
+}
+
+.content-box {
+  @apply bg-rock-dark/65 backdrop-blur-md border border-rock-gold rounded-sm shadow-glow-gold;
+}
+
+.menu-item {
+  @apply font-cinzel uppercase tracking-wider text-rock-gold hover:text-rock-gold-warm transition-colors duration-300;
+}
+
+/* Navigation links */
+.nav-link {
+  @apply relative overflow-hidden font-cinzel uppercase tracking-wider;
+}
+
+.nav-link::after {
+  content: '';
+  @apply absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-rock-energy-start to-rock-energy-end transition-all duration-300;
+}
+
+.nav-link:hover::after {
+  @apply w-full;
+}
+
+/* Photo gallery */
+.photo-item {
+  @apply relative overflow-hidden rounded-sm;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.photo-item:hover {
+  transform: scale(1.02);
+  box-shadow: var(--glow-gold);
+}
+
+/* Stage lighting effects */
+.spotlight {
+  @apply absolute w-96 h-96 rounded-full pointer-events-none;
+  background: radial-gradient(
+    circle,
+    rgba(0, 200, 255, 0.3) 0%,
+    rgba(255, 71, 0, 0.2) 50%,
+    transparent 70%
+  );
+}
+
+/* Button styles */
+.rock-button {
+  @apply px-6 py-2 font-cinzel uppercase tracking-wider bg-rock-dark border-2 border-rock-gold text-rock-gold font-bold rounded-sm transition-all duration-300;
+  text-shadow: 0 0 5px rgba(255, 216, 74, 0.5);
+  box-shadow: var(--glow-gold);
+}
+
+.rock-button:hover {
+  @apply bg-gradient-to-r from-rock-energy-start to-rock-energy-end border-rock-gold-warm text-white;
+  transform: translateY(-2px);
+  box-shadow: var(--glow-red);
+}
+
+/* Text styles */
+.title-text {
+  @apply font-cinzel font-black uppercase tracking-wider text-rock-gold drop-shadow-text-gold;
+}
+
+.subtitle-text {
+  @apply font-cinzel uppercase tracking-wide text-rock-gold-warm;
+}
+
+.body-text {
+  @apply font-roboto text-white leading-relaxed;
+}
