@@ -1,7 +1,7 @@
 // Configuration for MSAL authentication
 export const msalConfig = {
   auth: {
-    clientId: "YOUR_ONEDRIVE_APPLICATION_ID", // Replace with your OneDrive app registration client ID
+    clientId: process.env.ONEDRIVE_CLIENT_ID,
     authority: "https://login.microsoftonline.com/common",
     redirectUri: window.location.origin,
   },
